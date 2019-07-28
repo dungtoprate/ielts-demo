@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center">Welcome to Mocktest</h1>
+  <br/><br/>
+  <form method="GET" action="/">
+  <div class="form-group">
+    <label for="name">Full name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="name" name="name" placeholder="Enter your name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <button action="/reading/" type="button" class="btn btn-default test">Reading</button>
+  <button action="/listening/" type="button" class="btn btn-primary test">Listening</button>
+  <button action="/writing/" type="button" class="btn btn-success test">Writing</button>
+</form>
+</div>
+
+<script type="text/javascript">
+  $(document).on("click", ".test", function() {
+    if($("#name").val() == "" || $("#email").val() == ""){
+      alert("Please fill your name and email");
+      return;
+    }
+    var action = $(this).attr("action");
+    $("form").attr("action", action);
+    $("form").submit();
+  });
+</script>
+</body>
+</html>

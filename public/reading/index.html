@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# schema: http://schema.org/ sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema# ">
+
+<head>
+    <meta http-equiv="Content-Type" content="charset=UTF-8" />
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+		var count = 0;
+		function check3(checkbox){
+			if(!checkbox.checked) {
+				count--;
+			} else {
+				if(count == 3) {
+					alert("You can only select up to 3 answers!");
+					checkbox.checked = false;
+				} else {
+					count++;
+				}
+			}
+		}
+	
+        function submitAnswer(){
+            var count = 0
+            // document.getElementById("as_1").innerHTML = document.getElementById("q-3").value;
+            if(document.getElementById("q-3").value.trim().toLowerCase() == "growth ring".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_2").innerHTML = document.getElementById("q-4").value;
+            if(document.getElementById("q-4").value.trim().toLowerCase() == "Methuselah sprouted".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_3").innerHTML = document.getElementById("q-5").value;
+            if(document.getElementById("q-5").value.trim().toLowerCase() == "cones".trim().toLowerCase() || document.getElementById("q-5").value.trim().toLowerCase() == "pine cones".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_4").innerHTML = document.getElementById("q-6").value;
+            if(document.getElementById("q-6").value.trim().toLowerCase() == "durable".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_5").innerHTML = document.getElementById("q-7").value;
+            if(document.getElementById("q-7").value.trim().toLowerCase() == "NOT GIVEN".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_6").innerHTML = document.getElementById("q-8").value;
+            if(document.getElementById("q-8").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_7").innerHTML = document.getElementById("q-9").value;
+            if(document.getElementById("q-9").value.trim().toLowerCase() == "FALSE".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_8").innerHTML = document.getElementById("q-10").value;
+            if(document.getElementById("q-10").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
+                count= count + 1;
+            }
+            var listRadio = []
+            if(document.getElementById("q-4097730-A").checked){
+                listRadio.push(document.getElementById("q-4097730-A").value)
+            }
+            if(document.getElementById("q-4097730-B").checked){
+                listRadio.push(document.getElementById("q-4097730-B").value)
+            }
+            if(document.getElementById("q-4097730-C").checked){
+                listRadio.push(document.getElementById("q-4097730-C").value)
+            }
+            if(document.getElementById("q-4097730-D").checked){
+                listRadio.push(document.getElementById("q-4097730-D").value)
+            }
+            if(document.getElementById("q-4097730-E").checked){
+                listRadio.push(document.getElementById("q-4097730-E").value)
+            }
+            if(listRadio.length > 0){
+				var text = "";
+				for (i = 0; i < listRadio.length; i++) {
+				    text += listRadio[i];
+				}
+				if(text.includes("A") && text.includes("C") && text.includes("D")){
+					count= count + 3;
+                } else if((text.includes("A") && text.includes("C")) || (text.includes("A") && text.includes("D")) || (text.includes("C") && text.includes("D"))){
+					count= count + 2;
+                } else if(text.includes("A") || text.includes("C") || text.includes("D")){
+					count= count + 1;
+                }					
+            }
+
+            var listQ12 = null
+            if(document.getElementById("Choice-4097820-A").checked){
+                listQ12 = document.getElementById("Choice-4097820-A").value
+            }
+            if(document.getElementById("Choice-4097820-B").checked){
+                listQ12 = document.getElementById("Choice-4097820-B").value
+            }
+            if(document.getElementById("Choice-4097820-C").checked){
+                listQ12 = document.getElementById("Choice-4097820-C").value
+            }
+            if(document.getElementById("Choice-4097820-D").checked){
+                listQ12 = document.getElementById("Choice-4097820-D").value
+            }
+            if(listQ12 != null){
+                // document.getElementById("as_10").innerHTML = listQ12;
+                if(listQ12 == "A"){
+                    count= count + 1;
+                }
+            }
+            
+            var listQ13 = null;
+            if(document.getElementById("Choice-4097821-A").checked){
+                listQ13 = document.getElementById("Choice-4097821-A").value
+            }
+            if(document.getElementById("Choice-4097821-B").checked){
+                listQ13 = document.getElementById("Choice-4097821-B").value
+            }
+            if(document.getElementById("Choice-4097821-C").checked){
+                listQ13 = document.getElementById("Choice-4097821-C").value
+            }
+            if(document.getElementById("Choice-4097821-D").checked){
+                listQ13 = document.getElementById("Choice-4097821-D").value
+            }
+            if(listQ13 != null){
+                // document.getElementById("as_11").innerHTML = listQ13;
+                if(listQ13 == "D"){
+                    count= count + 1;
+                }
+            }
+            
+            var listQ14 = null;
+            if(document.getElementById("Choice-4098270-A").checked){
+                listQ14 = document.getElementById("Choice-4098270-A").value
+            }
+            if(document.getElementById("Choice-4098270-B").checked){
+                listQ14 = document.getElementById("Choice-4098270-B").value
+            }
+            if(document.getElementById("Choice-4098270-C").checked){
+                listQ14 = document.getElementById("Choice-4098270-C").value
+            }
+            if(document.getElementById("Choice-4098270-D").checked){
+                listQ14 = document.getElementById("Choice-4098270-D").value
+            }
+           
+            if(listQ14 != null){
+                // document.getElementById("as_12").innerHTML = listQ14;
+                if(listQ14 == "B"){
+                    count= count + 1;
+                }
+            }
+            var listQ15 = null;
+            if(document.getElementById("Choice-4098271-A").checked){
+                listQ15 = document.getElementById("Choice-4098271-A").value
+            }
+            if(document.getElementById("Choice-4098271-B").checked){
+                listQ15 = document.getElementById("Choice-4098271-B").value
+            }
+            if(document.getElementById("Choice-4098271-C").checked){
+                listQ15 = document.getElementById("Choice-4098271-C").value
+            }
+            if(document.getElementById("Choice-4098271-D").checked){
+                listQ15 = document.getElementById("Choice-4098271-D").value
+            }
+            if(listQ15 != null){
+                // document.getElementById("as_13").innerHTML = listQ15;
+                if(listQ15 == "A"){
+                    count= count + 1;
+                }
+            }
+         
+            var listQ16 = null;
+            if(document.getElementById("Choice-4098272-A").checked){
+                listQ16 = document.getElementById("Choice-4098272-A").value
+            }
+            if(document.getElementById("Choice-4098272-B").checked){
+                listQ16 = document.getElementById("Choice-4098272-B").value
+            }
+            if(document.getElementById("Choice-4098272-C").checked){
+                listQ16 = document.getElementById("Choice-4098272-C").value
+            }
+            if(document.getElementById("Choice-4098272-D").checked){
+                listQ16 = document.getElementById("Choice-4098272-D").value
+            }
+            if(listQ16 != null){
+                // document.getElementById("as_14").innerHTML = listQ16;
+                if(listQ16 == "D"){
+                    count= count + 1;
+                }
+            }
+            
+            // document.getElementById("as_15").innerHTML = document.getElementById("q-17").value;
+            if(document.getElementById("q-17").value.trim().toLowerCase() == "relevant dive time".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_16").innerHTML = document.getElementById("q-18").value;
+            if(document.getElementById("q-18").value.trim().toLowerCase() == "dive plan".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_17").innerHTML = document.getElementById("q-19").value;
+            if(document.getElementById("q-19").value.trim().toLowerCase() == "decompression stops".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_18").innerHTML = document.getElementById("q-20").value;
+            if(document.getElementById("q-20").value.trim().toLowerCase() == "guide rope".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_19").innerHTML = document.getElementById("q-21").value;
+            if(document.getElementById("q-21").value.trim().toLowerCase() == "sufficient tension".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_20").innerHTML = document.getElementById("q-22").value;
+            if(document.getElementById("q-22").value.trim().toLowerCase() == "one fails".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_21").innerHTML = document.getElementById("q-23").value;
+            if(document.getElementById("q-23").value.trim().toLowerCase() == "equally".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_22").innerHTML = document.getElementById("q-24").value;
+            if(document.getElementById("q-24").value.trim().toLowerCase() == "parted".trim().toLowerCase() || document.getElementById("q-24").value.trim().toLowerCase() == "parted company".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_23").innerHTML = document.getElementById("q-25").value;
+            if(document.getElementById("q-25").value.trim().toLowerCase() == "statistics".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_24").innerHTML = document.getElementById("q-26").value;
+            if(document.getElementById("q-26").value.trim().toLowerCase() == "never seen".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_25").innerHTML = document.getElementById("q-27").value;
+            if(document.getElementById("q-27").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_26").innerHTML = document.getElementById("q-28").value;
+            if(document.getElementById("q-28").value.trim().toLowerCase() == "NOT GIVEN".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_27").innerHTML = document.getElementById("q-29").value;
+            if(document.getElementById("q-29").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_28").innerHTML = document.getElementById("q-30").value;
+            if(document.getElementById("q-30").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_29").innerHTML = document.getElementById("q-31").value;
+            if(document.getElementById("q-31").value.trim().toLowerCase() == "FALSE".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_30").innerHTML = document.getElementById("q-32").value;
+            if(document.getElementById("q-32").value.trim().toLowerCase() == "high moral standing".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_31").innerHTML = document.getElementById("q-33").value;
+            if(document.getElementById("q-33").value.trim().toLowerCase() == "parole officer".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_32").innerHTML = document.getElementById("q-34").value;
+            if(document.getElementById("q-34").value.trim().toLowerCase() == "regulatory condition".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_33").innerHTML = document.getElementById("q-35").value;
+            if(document.getElementById("q-35").value.trim().toLowerCase() == "parole violation hearing".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_34").innerHTML = document.getElementById("q-36").value;
+            if(document.getElementById("q-36").value.trim().toLowerCase() == "criminal recidivism".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_35").innerHTML = document.getElementById("q-37").value;
+            if(document.getElementById("q-37").value.trim().toLowerCase() == "system cracking".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_36").innerHTML = document.getElementById("q-38").value;
+            if(document.getElementById("q-38").value.trim().toLowerCase() == "probation".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_37").innerHTML = document.getElementById("q-39").value;
+            if(document.getElementById("q-39").value.trim().toLowerCase() == "curfew".trim().toLowerCase() || document.getElementById("q-39").value.trim().toLowerCase() == "a curfew".trim().toLowerCase()){
+                count= count + 1;
+            }
+            // document.getElementById("as_38").innerHTML = document.getElementById("q-40").value;
+            if(document.getElementById("q-40").value.trim().toLowerCase() == "good time".trim().toLowerCase()){
+                count= count + 1;
+            }
+
+            var url_string = window.location.href; //window.location.href
+            var url = new URL(url_string);
+            var name = url.searchParams.get("name");
+            var email = url.searchParams.get("email");
+            const data = JSON.stringify({
+                name: name,
+                email: email,
+                reading: count + "/40"
+            });
+            fetch('https://us-central1-ielts-demo-43ea9.cloudfunctions.net/api/saveResult', {
+			mode: 'no-cors',
+            method: 'POST',
+            body: data,
+			headers:{
+				'Content-Type': 'application/json'
+			}
+            }).then((response) => {
+                if (response.status == 0) {
+                    document.getElementById("answer").innerHTML = "Successful!"
+                }else{
+                    document.getElementById("answer").innerHTML = "Error!"
+                }
+            });
+        }
+        window.NREUM || (NREUM = {}), __nr_require = function(e, n, t) {
+            function r(t) {
+                if (!n[t]) {
+                    var o = n[t] = {
+                        exports: {}
+                    };
+                    e[t][0].call(o.exports, function(n) {
+                        var o = e[t][1][n];
+                        return r(o || n)
+                    }, o, o.exports)
+                }
+                return n[t].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var o = 0; o < t.length; o++) r(t[o]);
+            return r
+        }({
+            1: [function(e, n, t) {
+                function r() {}
+
+                function o(e, n, t) {
+                    return function() {
+                        return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+                    }
+                }
+                var i = e("handle"),
+                    a = e(3),
+                    u = e(4),
+                    f = e("ee").get("tracer"),
+                    c = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    d = "api-",
+                    l = d + "ixn-";
+                a(p, function(e, n) {
+                    s[n] = o(d + n, !0, "api")
+                }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, n) {
+                        var t = {},
+                            r = this,
+                            o = "function" == typeof n;
+                        return i(l + "tracer", [c.now(), e, t], r),
+                            function() {
+                                if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                                    return n.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], t), e
+                                } finally {
+                                    f.emit("fn-end", [c.now()], t)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, n) {
+                    m[n] = o(l + n)
+                }), newrelic.noticeError = function(e, n) {
+                    "string" == typeof e && (e = new Error(e)), i("err", [e, c.now(), !1, n])
+                }
+            }, {}],
+            2: [function(e, n, t) {
+                function r(e, n) {
+                    if (!o) return !1;
+                    if (e !== o) return !1;
+                    if (!n) return !0;
+                    if (!i) return !1;
+                    for (var t = i.split("."), r = n.split("."), a = 0; a < r.length; a++)
+                        if (r[a] !== t[a]) return !1;
+                    return !0
+                }
+                var o = null,
+                    i = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var u = navigator.userAgent,
+                        f = u.match(a);
+                    f && u.indexOf("Chrome") === -1 && u.indexOf("Chromium") === -1 && (o = "Safari", i = f[1])
+                }
+                n.exports = {
+                    agent: o,
+                    version: i,
+                    match: r
+                }
+            }, {}],
+            3: [function(e, n, t) {
+                function r(e, n) {
+                    var t = [],
+                        r = "",
+                        i = 0;
+                    for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+                    return t
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            4: [function(e, n, t) {
+                function r(e, n, t) {
+                    n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+                    for (var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[n + r];
+                    return i
+                }
+                n.exports = r
+            }, {}],
+            5: [function(e, n, t) {
+                n.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, n, t) {
+                function r() {}
+
+                function o(e) {
+                    function n(e) {
+                        return e && e instanceof r ? e : e ? f(e, u, i) : i()
+                    }
+
+                    function t(t, r, o, i) {
+                        if (!d.aborted || i) {
+                            e && e(t, r, o);
+                            for (var a = n(o), u = v(t), f = u.length, c = 0; c < f; c++) u[c].apply(a, r);
+                            var p = s[y[t]];
+                            return p && p.push([b, t, r, a]), a
+                        }
+                    }
+
+                    function l(e, n) {
+                        h[e] = v(e).concat(n)
+                    }
+
+                    function m(e, n) {
+                        var t = h[e];
+                        if (t)
+                            for (var r = 0; r < t.length; r++) t[r] === n && t.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return p[e] = p[e] || o(t)
+                    }
+
+                    function w(e, n) {
+                        c(e, function(e, t) {
+                            n = n || "feature", y[t] = n, n in s || (s[n] = [])
+                        })
+                    }
+                    var h = {},
+                        y = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: t,
+                            get: g,
+                            listeners: v,
+                            context: n,
+                            buffer: w,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function i() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+                }
+                var u = "nr@context",
+                    f = e("gos"),
+                    c = e(3),
+                    s = {},
+                    p = {},
+                    d = n.exports = o();
+                d.backlog = s
+            }, {}],
+            gos: [function(e, n, t) {
+                function r(e, n, t) {
+                    if (o.call(e, n)) return e[n];
+                    var r = t();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, n, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (i) {}
+                    return e[n] = r, r
+                }
+                var o = Object.prototype.hasOwnProperty;
+                n.exports = r
+            }, {}],
+            handle: [function(e, n, t) {
+                function r(e, n, t, r) {
+                    o.buffer([e], r), o.emit(e, n, t)
+                }
+                var o = e("ee").get("handle");
+                n.exports = r, r.ee = o
+            }, {}],
+            id: [function(e, n, t) {
+                function r(e) {
+                    var n = typeof e;
+                    return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function() {
+                        return o++
+                    })
+                }
+                var o = 1,
+                    i = "nr@id",
+                    a = e("gos");
+                n.exports = r
+            }, {}],
+            loader: [function(e, n, t) {
+                function r() {
+                    if (!E++) {
+                        var e = x.info = NREUM.info,
+                            n = l.getElementsByTagName("script")[0];
+                        if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+                        c(y, function(n, t) {
+                            e[n] || (e[n] = t)
+                        }), f("mark", ["onload", a() + x.offset], null, "api");
+                        var t = l.createElement("script");
+                        t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+                    }
+                }
+
+                function o() {
+                    "complete" === l.readyState && i()
+                }
+
+                function i() {
+                    f("mark", ["domContent", a() + x.offset], null, "api")
+                }
+
+                function a() {
+                    return O.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - x.offset
+                }
+                var u = (new Date).getTime(),
+                    f = e("handle"),
+                    c = e(3),
+                    s = e("ee"),
+                    p = e(2),
+                    d = window,
+                    l = d.document,
+                    m = "addEventListener",
+                    v = "attachEvent",
+                    g = d.XMLHttpRequest,
+                    w = g && g.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: g,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var h = "" + location,
+                    y = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1130.min.js"
+                    },
+                    b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                    x = n.exports = {
+                        offset: u,
+                        now: a,
+                        origin: h,
+                        features: {},
+                        xhrWrappable: b,
+                        userAgent: p
+                    };
+                e(1), l[m] ? (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) : (l[v]("onreadystatechange", o), d[v]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+                var E = 0,
+                    O = e(5)
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i["GoogleAnalyticsObject"] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+        ga("create", "UA-63735582-4", {
+            "cookieDomain": "auto"
+        });
+        ga("set", "anonymizeIp", true);
+        ga("send", "pageview");
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?26adf5e5bbdbc85e894a11335becab78';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <meta name="title" content="IELTS Mock Test 2018 - December_Reading Practice Test 1" />
+    <link rel="canonical" href="https://ieltsonlinetests.com/ielts-mock-test-2018-december-reading-practice-test-1" />
+    <meta name="keywords" content="IELTS Mock Test 2018 - December_Reading Practice Test 1" />
+    <meta property="og:image" content="https://ieltsonlinetests.com/sites/default/files/iot_logo_square.jpg" />
+    <meta property="og:image:url" content="https://ieltsonlinetests.com/sites/default/files/iot_logo_square.jpg" />
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="sites/default/files/IOTFavIcon20x20px.png" type="image/png" />
+    <link rel="alternate" hreflang="en" href="https://ieltsonlinetests.com/ielts-mock-test-2018-december-reading-practice-test-1" />
+    <link rel="revision" href="https://ieltsonlinetests.com/ielts-mock-test-2018-december-reading-practice-test-1" />
+    <title>IELTS Mock Test 2018 - December Reading Practice Test 1</title>
+    <meta name="baidu-site-verification" content="mSgLLGPyqi" />
+    <meta name="shenma-site-verification" content="c470a8a613dec0f3dd9b5d6df4836258_1523957324" />
+    <meta name="360-site-verification" content="50c3068b67bd3e35d71ad15a43703242" />
+    <meta name="sogou_site_verification" content="20FijwCsfE" />
+    <meta name="msvalidate.01" content="5CBD4E42067EF2EC49331733F7BCEDE3" />
+    <link rel="stylesheet" media="all" href="sites/default/files/css/css_NLtSCCngfBi18vvhHCz7g5Ba_-ZnyMHhO8j4w04t7PY.css" />
+    <link rel="stylesheet" media="all" href="sites/default/files/css/css_1YDGZk5mXB440b_fLcIpnqJHUE_aLVNm4bgp-RUKN-o.css" />
+    <link rel="stylesheet" media="all" href="sites/default/files/css/css_jAoCCbbgtnwuQr3BPoFNCuQUEUsSZnuqj5MMRdEerwY.css" />
+    <link rel="stylesheet" media="all" href="sites/default/files/css/css_e5KXZioTwsd3X54m0402dJ7GUSn9cNMMNZ_Al4C4-Xc.css" />
+    <link rel="stylesheet" media="all" href="sites/default/files/css/css_GWCUfQ1sYopwpJhtDG5RwcblNAW-TJqzmiP88Bld2WE.css" />
+    <!--[if lte IE 8]><script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script><![endif]-->
+    <script src="sites/default/files/js/js_B7pS3ddmNLFYOJi3j28odiodelMu-EhaOeKlHZ8E6y0.js"></script>
+    <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body class="reading-page show-palette path-node page-node-type-quiz has-glyphicons anonymous-user">
+    <div id="overlay-region" class="">&nbsp;</div>
+    <div id="overlay-menu"></div><a href="#main-content" class="visually-hidden focusable"> Skip to main content</a>
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div class="region region-header-question">
+            <section id="block-headerquestion" class="block block-iot-ielts block-headerquestion clearfix">
+                <nav class="menu-res menu-res-reading hidden-lg hidden-md">
+                    <div class="msr-menu clearfix">
+                        <nav class="menu-reading">
+                            <ul>
+                                <li class="font-size"> <a href="#"><span class="icon-text"></span>Text Size</a>
+                                    <div class="text-font-size">
+                                        <ul>
+                                            <li><a class="font-large" href="javascript:;">Aa</a></li>
+                                            <li><a class="font-medium" href="javascript:;">Aa</a></li>
+                                            <li><a class="font-small" href="javascript:;">Aa</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <!--<li>
+                                    <a href="http://13.239.60.188/" class="exit-the-test2" data-dialog-type="modal2"> <span class="icon-exit"></span>Exit Test </a>
+                                </li>-->
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+                <header class="reading-header">
+                    <div class="container">
+                        <div class="rh-top hidden-sm hidden-xs">
+                            <div class="test-hero hidden-sm hidden-xs"> <img alt="" src="2018-03/MTdec2018.png">
+                                <h1 class="test-caption">IELTS Mock Test 2018 - December</h1>
+                                <div class="test-vote">
+                                    <div id="rate-node-408577" class="rate-widget-fivestar">
+                                        <div class="item-list test-vote">
+                                            <div class="star-rating" title="74%"> <span class="rating-point">3.7</span>
+                                                <div class="back-stars">
+                                                    <a class="fa fa-star rate-fivestar-1 link-popup-login" data-target="#modal-login-pop" data-toggle="modal" href="#"></a>
+                                                    <a class="fa fa-star rate-fivestar-2 link-popup-login" data-target="#modal-login-pop" data-toggle="modal" href="#"></a>
+                                                    <a class="fa fa-star rate-fivestar-3 link-popup-login" data-target="#modal-login-pop" data-toggle="modal" href="#"></a>
+                                                    <a class="fa fa-star-o rate-fivestar-4 link-popup-login" data-target="#modal-login-pop" data-toggle="modal" href="#"></a>
+                                                    <a class="fa fa-star-o rate-fivestar-5 link-popup-login" data-target="#modal-login-pop" data-toggle="modal" href="#"></a>
+                                                </div> <em>(140 votes)</em></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="components">
+                                <div class="test-des">
+                                    <div class="test-published"> <span class="icon-ts icon-calendar"></span> Published on: 22 Mar 2018</div>
+                                    <div class="test-views"> <span class="icon-ts icon-view"></span> Views: 295869</div>
+                                    <div class="test-taken"> <span class="icon-ts icon-taken"></span> Tests Taken: 47592</div>
+                                </div>
+			    </div> -->
+                            <div class="brand-reading brand-reading">
+                                <div class="om-icon"></div>
+                                <p>Reading Practice Test 1</p>
+                            </div>
+                        </div>
+                        <div class="rh-menu"><span class="show-test-menu hidden-sm hidden-xs"><em></em> Show Test Info</span>
+                            <nav class="menu-reading hidden-sm hidden-xs">
+                                <ul>
+                                    <li><a href="#" class="pop"><span class="icon-text"></span></a>
+                                        <div class="popover-cont">
+                                            <div class='reading-font-wrap'>
+                                                <div class='reading-font font-large'>Aa</div>
+                                                <div class='reading-font font-medium'>Aa</div>
+                                                <div class='reading-font font-small'>Aa</div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!--<li> <a href="http://13.239.60.188/" class="exit-the-test2 pop2" data-dialog-type="modal2"><span class="icon-exit"></span></a>
+                                        <div class="popover-cont">Exit Test</div>
+                                    </li>-->
+                                </ul>
+                            </nav>
+                            <!-- <div class="rh-right">
+                                <a href="index.html" class="logo-small"> <img alt="" src="themes/iot/images/logo_small.png"> </a>
+                            </div> -->
+                            <!-- <a href="index.html" class="logo-brand"> <img alt="" src="themes/iot/images/logo.svg"> </a> -->
+                            <div class="nav-icon hidden-lg hidden-md"> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span></div>
+                        </div>
+                    </div>
+                </header>
+                <div class="modal fade" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-auto modal-share">
+                        <div class="iot-modal-wrapper"> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                            <h2 class="modal-caption"> Share this test</h2>
+                            <div class="modal-share-content">
+                                <div class="share-socer share-ranking">
+                                    <input type="text" class="txt txt-link share-result" value="https://ieltsonlinetests.com/ielts-mock-test-2018-december-reading-practice-test-1">
+                                    <div class="ss-social">
+                                        <a href="#" class="btn btn-coppy-url share-result"> <span class="icon-copy"></span> Copy URL </a>
+                                        <div class="ss-share a2a_kit"> <span>&nbsp; </span> <a class="a2a_button_facebook" href="#"><i class="fa fa-facebook"></i></a> <a class="a2a_button_twitter" href="#"><i class="fa fa-twitter"></i></a> <a class="a2a_button_google_plus" href="#"><i class="fa fa-google-plus"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="region region-content">
+            <div data-drupal-messages-fallback class="hidden"></div>
+            <article data-history-node-id="409312" role="article" about="/ielts-mock-test-2018-december-reading-practice-test-1">
+                <div class="modal fade" id="modal-exit-test" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+                    <div class="modal-dialog modal-auto modal-time-left">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                            <h2 class="modal-caption"> Are you sure you want to exit?</h2>
+                            <div class="review-content">
+                                <div class="control-modal-button"> <a class="btn-retake" href="collection/ielts-mock-test-2018-december.html"><span></span> Exit the test </a> <a class="btn-cancel" data-dismiss="modal" aria-label="Close"><span></span> Cancel</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-exit-test-solution" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+                    <div class="modal-dialog modal-auto modal-time-left modal-solution">
+                        <div class="iot-modal-wrapper"> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                            <h2 class="modal-caption"> Are you sure you want to view the solution now?</h2>
+                            <p class="modal-des">*This action will NOT submit your test and your answers will be LOST</p>
+                            <div class="review-content">
+                                <div class="control-modal-button"> <a class="md-submit-bt" href="ielts-mock-test-2018-december-reading-practice-test-1/solution.html"><span></span> View the solution </a> <a class="btn-cancel" data-dismiss="modal" aria-label="Close"><span></span> Cancel</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade in" id="modal-solution" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+                    <div class="modal-dialog modal-auto modal-profile">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                            <h2 class="modal-caption"> Review your answers</h2>
+                            <div class="review-content">
+                                <div class="rc-row">
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q1:</span>
+                                            <p id="txtq1"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q2:</span>
+                                            <p id="txtq2"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q3:</span>
+                                            <p id="txtq3"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q4:</span>
+                                            <p id="txtq4"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q5:</span>
+                                            <p id="txtq5"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q6:</span>
+                                            <p id="txtq6"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q7:</span>
+                                            <p id="txtq7"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q8:</span>
+                                            <p id="txtq8"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q9-11:</span>
+                                            <p id="txtq9-11"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q12:</span>
+                                            <p id="txtq12"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q13:</span>
+                                            <p id="txtq13"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q14:</span>
+                                            <p id="txtq14"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q15:</span>
+                                            <p id="txtq15"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q16:</span>
+                                            <p id="txtq16"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q17:</span>
+                                            <p id="txtq17"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q18:</span>
+                                            <p id="txtq18"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q19:</span>
+                                            <p id="txtq19"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q20:</span>
+                                            <p id="txtq20"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q21:</span>
+                                            <p id="txtq21"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q22:</span>
+                                            <p id="txtq22"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q23:</span>
+                                            <p id="txtq23"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q24:</span>
+                                            <p id="txtq24"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q25:</span>
+                                            <p id="txtq25"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q26:</span>
+                                            <p id="txtq26"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q27:</span>
+                                            <p id="txtq27"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q28:</span>
+                                            <p id="txtq28"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q29:</span>
+                                            <p id="txtq29"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q30:</span>
+                                            <p id="txtq30"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q31:</span>
+                                            <p id="txtq31"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q32:</span>
+                                            <p id="txtq32"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q33:</span>
+                                            <p id="txtq33"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q34:</span>
+                                            <p id="txtq34"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q35:</span>
+                                            <p id="txtq35"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q36:</span>
+                                            <p id="txtq36"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q37:</span>
+                                            <p id="txtq37"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q38:</span>
+                                            <p id="txtq38"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q39:</span>
+                                            <p id="txtq39"></p>
+                                        </div>
+                                    </div>
+                                    <div class="rc-col">
+                                        <div class="rc-item"> <span>Q40:</span>
+                                            <p id="txtq40"></p>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="bp-control text-center"> <a data-dismiss="modal" aria-label="Close"> Close </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-expired" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+                    <div class="modal-dialog modal-auto modal-time-left">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                            <h2 class="modal-caption"> Time is up</h2>
+                            <p class="modal-des">Please choose the following option</p>
+                            <div class="review-content">
+                                <div class="bp-control-time-left ">
+                                    <a class="link-popup-login rf-button" data-target="#modal-login-pop" data-toggle="modal" data-submittest="submit" href="#"> <span class="icon-submit"></span> Submit and Review Answers </a>
+                                    <a class="btn-continute"> <span></span> Continue to finish the test </a> <a href="collection/ielts-mock-test-2018-december.html" class="btn-retake"><span></span> Exit the test </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-submit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+                    <div class="modal-dialog modal-auto modal-submit">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                            <h2 class="modal-caption"> Are you sure you want to submit?</h2>
+                            <p class="modal-des">&nbsp;</p>
+                            <div class="review-content">
+                                <div class="control-modal-button"> <a id="submit-test-block" class="submit-test-block md-submit-bt"><span></span> Submit and Review Answers </a> <a class="btn-cancel btn-start-time-audio" data-dismiss="modal" aria-label="Close"><span></span> Cancel</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testing reading-box api">
+                    <div id="slpit-one" class="split split-item">
+                        <div style="background-color: #d6e4da; height:0;">
+                            <div id="context-menu" class="context-menu" style="position: relative;display: none;width: 180px;">
+                                <div title="Highlight Red" class="cm-item cm-pink" data-color="hl-pink"></div>
+                                <div title="Highlight Blue" class="cm-item cm-blue" data-color="hl-blue"></div>
+                                <div title="Highlight Green" class="cm-item cm-green" data-color="hl-green"></div>
+                                <div title="Remove Highlight" class="cm-item cm-delete" data-color="cm-delete"></div>
+                            </div>
+                        </div>
+                        <div class="split-right padding-top-1" style="background-color: #bcb1c3;">
+                            <div id="set-container-1" class="tab-section-reading active">
+                                <div class="passage-description">
+                                    <h1><a name="bookmark13"></a>Reading Passage 1</h1>
+                                    <p><em>You should spend about 20 minutes on <strong>Questions 1-13</strong>, which are based on Reading Passage One.</em></p>
+                                </div>
+                                <div class="section-image"><img height="auto" src="2018-03/Pine Trees.jpg" /></div>
+                                <h2 class="subtitle"> Pine Trees</h2>
+                                <div class="passage-content">
+                                    <p class="text-align-justify">I am looking at a very thick twisted trunk, rising to medium height, at which point appears a stumpy canopy of spiky needles. It's a tree, but a very special one. Ron Simonson, a park ranger explains. "It's a bristlecone pine, and it's been given the name, Methuselah". I ask the obvious question, and Ron replies, "Because like Methuselah from the bible, this tree is very old, one of the oldest living things on Earth in fact." I ask the next obvious question, and Ron replies, "Basically Methuselah has existed throughout virtually all of recorded human history." I look again at this quiet and unassuming tree, beginning to realise it is worthy of great respect.</p>
+                                    <p class="text-align-justify">Being in a cold climate, facing limited summer seasons, rooted in nutrient poor and dry soil, and subject to high winds and withering winters, bristlecone pines mature very slowly indeed. Yet mature they do, as with all pines becoming fractionally thicker every year as another growth ring is added to their truck. By counting these, we can accurately state that, as of 2011, Methuselah was4,842 years old, meaning that it sprouted as a seedling in 2832 BC, centuries before the ancient Egyptians began building their pyramids. And that's just one fascinating fact about that well-known species of tree - the pine.</p>
+                                    <p class="text-align-justify">Pines trees are native to most of the Northern Hemisphere. Several species have adapted to the harsh conditions of high elevations and latitudes, including Methuselah himself, growing among the peaks of the White Mountains of Northern California.</p>
+                                    <p class="text-align-justify">Pines can be small, such as the Siberian Dwarf Pine, or huge, such as the Ponderosa Pine in the wilds of Oregon, and there are over 100 varieties in all. They have been introduced in to the more temperate portions of the Southern Hemisphere, where they are now grown widely, becoming a familiar feature in parks and gardens. It would not be too much of an exaggeration to say that almost everyone knows pines.</p>
+                                    <p class="text-align-justify">These trees certainly have many telltale characteristics. They are evergreen, usually with needle-like foliage and a sharp pleasant 'pine smell. They are often large and imposing, with thick scaly bark, and always produce their signature pine cones. These formations are certainly not simple. They can be male (small, inconspicuous, and shedding pollen) or female (large, woody, and containing seeds), even when appearing on the same tree. They have numerous scales arranged in a spiral, with seeds (on the female) tucked within. As the cone opens, the seeds eventually fall out, mostly to be dispersed by the wind, or sometimes by birds. In some varieties, the cones remain closed until their binding resin is melted by forest fires.</p>
+                                    <p class="text-align-justify">This last fact - the need for wildfires for regeneration - is another fascinating aspect of many pine species. In fire-prone areas, it can result in extensive stands of pines, a good example being in 'pine barrens'. These are eco-regions of sandy nutrient-poor soil dominated by pines, since the frequency of natural (usually lightning-induced) fires weeds out the less fire-tolerant species. It is perhaps sad that modern fire prevention methods have resulted in the decline of many pine species in the wild, and most ancient pine barrens are now being taken over by other forest vegetation.</p>
+                                    <p class="text-align-justify">However, the situation is very different for home and commercial use, which has seen pines become a very common sight. As these trees grow fast, can be planted in dense arrays, and produce attractive and easily moulded wood, they are favourites for commercial plantations. The wood is fragrant, but prone to decay, so it is most suitable for indoor or dry carpentry, rather than outdoors, where more durable varieties are necessary. As for other uses of pines, their branches are valued as Christmas trees, and their wood is also pulped in factories for paper and chipboard production. Pine resin is a byproduct, and this is collected for distillation into turpentine, an important industrial solvent.</p>
+                                    <p class="text-align-justify">In a more homely sense, perhaps what people most like are the cones, the largest of which are regularly used by children and craft enthusiasts. With the widespread distribution of pines across the Northern Hemisphere, cones form part of the many traditional cultures there, where they are used for decorative purposes, fire starters, bird feeders, or just intriguing natural playthings for young children. Many people lament that modern manufactured toys in the more affluent of these countries have displaced cones, although some Nordic communities still teach traditional 'cone-craft' in high schools.</p>
+                                    <p class="text-align-justify">For some reason, I always come back to Methuselah. Ron tells me a story. In 1964, a student was taking a coring sample from another bristlecone pine in the area. His coring toll broke, so the tree was cut down to allow dating by an examination of a cross-section of its trunk. Upon doing this, to the astonishment of all, 4,844 rings were counted, signifying that the tree was even older than Methuselah. Ron smiles wryly at the thought. 'We deliberately killed the oldest life on Earth. That's one reason why we keep the location of Methuselah a secret. This tree is precious, and must be kept free from all human interference.'</p>
+                                </div>
+                            </div>
+                            <div id="set-container-2" class="tab-section-reading hidden">
+                                <div class="passage-description">
+                                    <h1><a name="bookmark21"></a>Reading Passage 2</h1>
+                                    <p><em>You should spend about 20 minutes on <strong>Questions 14-26</strong>, which are based on Reading Passage Two</em>.</p>
+                                </div>
+                                <div class="section-image"><img height="auto" src="2018-03/An Insanely Dangerous Activity.jpg" /></div>
+                                <h2 class="subtitle"> An Insanely Dangerous Activity</h2>
+                                <div class="passage-content">
+                                    <p>Agnes Milowka was one of the foremost cave divers in the world. Female, photogenic, and experienced, she had gained international recognition for her exploratory work in many&nbsp;underground caverns around the world. In early 2011, she entered Tank Cave, near Mount Gambier,&nbsp;a seven-kilometre maze of narrow tunnels - yet ones she had explored many times before. Deep&nbsp;inside, she parted company from her dive buddy to explore a tight passageway through which only&nbsp;one person could pass. What happened next will never be exactly known, but the nature of the&nbsp;cave suggests that she became disoriented during a ‘silt-out’. Unable to manoeuvre quickly, with&nbsp;visibility almost zero, she could not find her way back, and her air ran out.</p>
+                                    <p>Thinking of these last moments is disturbing, but illustrates the obvious dangers of cave diving. When anything goes wrong, divers cannot swim vertically to the surface, but must instead navigate&nbsp;the entire way back. The dive is immediately abandoned, but even with the full team at hand, the&nbsp;return is complicated by narrow tunnels, often lined with sand, mud, or clay, all of which can be&nbsp;easily disturbed - the dreaded ‘silt-out’ - where, in a few seconds, the diver is in a panic-inducing&nbsp;soup of sediment, virtually blind. Artificial light is swallowed in the pitch blackness, and there&nbsp;always needs to be sufficient breathing gas. In short, cave diving seems an insanely dangerous&nbsp;activity.</p>
+                                    <p>Yet the cave-diving community disputes this, arguing that their sport is actually safer than normal open-sea recreational diving. This is due to the much greater degrees of experience and training,&nbsp;and the special equipment used. Most fatalities that have occurred are a result of breaking accepted&nbsp;protocols, where improperly trained and inadequately equipped divers take on caves well beyond&nbsp;their capabilities. Cave divers maintain that, if the rules and guidelines are followed, their sport&nbsp;becomes acceptably safe. In the rare cases where deaths have happened while following these,&nbsp;there have typically been unusual circumstances, such as unexpected currents or rock falls.</p>
+                                    <p>So, what are those protocols? There are five major ones, all decided upon after extensive accident analysis (the breaking down of accident reports to find their most common causes). Firstly, a cave&nbsp;diver should be trained and experienced. This is done in carefully documented components, each&nbsp;dealing with increasingly complex facets of cave diving, and accompanied with relevant, dive time&nbsp;before progression onwards is allowed. The next rule is the same as with all diving, whether open-sea or cave. It concerns the maximum depths and the decompression stops needed to allow the&nbsp;release of dissolved nitrogen from the blood. This is all carefully calculated in a dive plan before&nbsp;entering the water, and every diver must strictly adhere to this.</p>
+                                    <p>The next two protocols each concern a vital piece of equipment. Firstly, a guide rope is an absolute necessity. This is secured at the cave entrance, and fed into the cave by the lead diver. Sufficient&nbsp;tension is always maintained, and often the rope is tied up at regular lengths within the cave&nbsp;interior to ensure this. In the event of a silt-out, all divers, in theory, can find this rope, using&nbsp;it to guide their way back to the cave entrance. Equally crucial are the lights. A diver without&nbsp;lights is effectively marooned, unable to go anywhere. Each diver is therefore required to have&nbsp;three independent sources: a primary, and two backups. These are checked under the water when&nbsp;entering the cave, and the protocol states that if even one of these fails, the dive is abandoned for&nbsp;all members of the team.</p>
+                                    <p>The final protocol is, in some ways, the most basic, and concerns the breathing gas. With no quick escape, the ‘rule of thirds’ prevails. Here, one third of the gas is reserved for exploring into the&nbsp;cave, one third for retreating out of it, and one third as a reserve in the event of an emergency, or&nbsp;to support fellow divers. Most protocols suggest keeping each third in a separate air system, so&nbsp;that the loss of one - for example, due to a valve rupture - will not imperil the other two. Another&nbsp;variation is to ensure that these three separate systems are used equally, so that the remaining air is&nbsp;kept balanced. Again, this is a defence against the loss of one system, maximising the amount of air&nbsp;remaining for the return.</p>
+                                    <p>By following all such protocols, the risk is minimised, so that cave diving, as far as can be proven with the limited statistics available, is said to be safer than driving a car. Yet, as the sad death of&nbsp;Agnes Milowka shows, lethal mishaps can always occur. The question to be asked then is why&nbsp;anyone would want to dive into cold, confined, pitch-dark, subterranean cave systems in the first&nbsp;place. The answer is supplied by a cave-diving leader: ‘You get to see things that human beings&nbsp;have never seen before. Nothing on Earth can compare to that.’</p>
+                                </div>
+                            </div>
+                            <div id="set-container-3" class="tab-section-reading hidden">
+                                <div class="passage-description">
+                                    <h1><a name="bookmark23"></a>Reading Passage 3</h1>
+                                    <p><em>You should spend about 20 minutes on <strong>Questions 27-40</strong>, which are based on Reading Passage Three.</em></p>
+                                </div>
+                                <div class="section-image"><img height="auto" src="2018-03/Criminal Rehabilitation.jpg" /></div>
+                                <h2 class="subtitle"> Criminal Rehabilitation: A Difficult Issue</h2>
+                                <div class="passage-content">
+                                    <p>When convicted criminals have served long terms of imprisonment, it is obvious that, upon their release, one cannot necessarily expect them to be reformed and able to reintegrate into society. In&nbsp;the potential ly rough and violent ganglands of prisons, quite the opposite may occur, which raises a&nbsp;difficult dilemma in the criminal justice system. To maintain social order, those who break the law&nbsp;are expected to be punished, yet that same maintenance of order means that rehabilitation must be&nbsp;given a high emphasis.</p>
+                                    <p>The ethic of rehabilitation is based on the assumption that criminal tendencies are not necessarily permanent, and that former inmates can successfully lead lives in which they contribute positively&nbsp;to society. The ultimate goal is to prevent them from reoffending, an event technically known&nbsp;as criminal recidivism. Prisons therefore contain systems of education or therapy, as well as&nbsp;assessment to determine whether inmates have truly developed remorse for past misdeeds, an&nbsp;ability to reintegrate into society, and intentions to do so. Assessing this accurately is a difficult&nbsp;issue, and it must be accepted that there are some people who can never be rehabilitated, however&nbsp;much we try.</p>
+                                    <p>The term psychopath is often used here, one of the key determiners of this condition being an inability to learn from past mistakes. Techniques towards improving their behaviour are&nbsp;thus&nbsp;unlikely to work. Obviously, recidivism is highly correlated with this condition, yet studies&nbsp;have shown that psychopathie prisoners are equally likely to be released from prisons as non-psychopathic ones. This is often explained by the fact that psychopathic individuals develop better&nbsp;strategies at disguising their intentions, and become more adept at tricking others. Treatment and&nbsp;therapy merely give them knowledge of penal and judicial procedures, which they can then twist to&nbsp;their advantage, colloquially known as ‘system cracking’.</p>
+                                    <p>Cases such as these reveal the biggest problem with rehabilitation: the difficulty of reading the deepest intentions of human beings. Nevertheless, inmates will be released, and consequently need&nbsp;assistance for their reintegration into society. This is most commonly done through parole, which&nbsp;involves serving the remainder of a sentence outside of prison. This is different from probation,&nbsp;which is used instead of prison sentences, and consequently places greater restrictions upon the&nbsp;subject. A similar system is supervised release, where the subject faces the same restrictions as&nbsp;probation, but only after serving the entire prison sentence. Whatever the case, the parole officer&nbsp;will monitor the released inmate, offering support and assistance wherever possible.</p>
+                                    <p>The decision about whether to grant parole usually lies with a parole board. Members may be judges, psychiatrists, criminologists, and appointed citizens from the local community. The common factor is that they all have a good education, and are judged to be of high moral standing. Yet again, trying to assess the inmate’s psychological state and what intentions lie within is&nbsp;problematic at best. Good conduct while inside the prison system is the most obvious prerequisite,&nbsp;but other factors based on the support networks existing outside also play a role. Having already&nbsp;established a permanent residence, and having gained employment, is usually mandatory.</p>
+                                    <p>Upon being released on parole, there are&nbsp;still a variety of regulatory conditions to be met. These include the obvious, such as obeying the law, and contacting the parole officer at specified&nbsp;intervals, but may be more individual and specific, such as the non-use of drugs and alcohol,&nbsp;and return to the home residence before a certain time (known as a curfew). Upon ignoring any&nbsp;of these, an arrest warrant is issued, parole time is stopped, and there follows a parole violation&nbsp;hearing. The parole board then makes a decision about whether to revoke the parole (which sees&nbsp;the subject reincarcerated) or to allow parole to continue. As mentioned, such decisions are not a&nbsp;hard science, and mistakes can be made.</p>
+                                    <p>it is this which can make parole a controversial and politically charged issue. It only takes one highly publicised crime from a person on parole to sway public opinion violently against this&nbsp;system. Thus, the political will is often lacking, which has seen, for example, some US states&nbsp;abolish the parole system completely, and others having done so for specific offences. This is often&nbsp;a response to public pressure, rather than a considered assessment of the pros and cons. As always,&nbsp;the same argument applies without parole as an intermediate step, released inmates may face an&nbsp;uphill battle to avoid recidivism, costing society much more in the longer term.</p>
+                                    <p>A more innovative method to encourage rehabilitation is ‘time off for good behaviour’. For each year of imprisonment, it automatically allots inmates who exhibit good behaviour a certain number&nbsp;of days. This means that, year after year, the ‘good time’ is accrued, resulting in an eventual release&nbsp;perhaps one third of the sentence earlier. However, if the inmates commit more than a certain&nbsp;number of infractions, or particularly serious ones, they then forfeit their time, and must complete&nbsp;the full, duration of their sentence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slpit-two" class="split split-item">
+                        <div class="split-left">
+                            <div id="set-question-1" class="tab-section-question-reading active">
+                                <div class="sl-caption"> <span>Section 1: Questions 1-13</span></div>
+                                <div class="sec-content-1 ">
+                                    <div class="question question-1">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad11">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad11" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 1-4</h3>
+                                        <div class="sl-item">
+                                            <div class="type_blank">
+                                                <p><em>Complete the sentences.</em></p>
+                                                <p><em>Choose <span style="color:#ff0000;"><strong>NO MORE THAN TWO WORDS</strong></span> from the passage for each answer.</em></p>
+                                                <p>Every year, pine trees gain another <span class="number-wrap-inline"> <span class="number">1</span>
+                                                    <input type="text" class="iot-question" data-num="1" data-q_type="8" id="q-3" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                                <p>The pyramids were built hundreds of years after <span class="number-wrap-inline"> <span class="number">2</span>
+                                                    <input type="text" class="iot-question" data-num="2" data-q_type="8" id="q-4" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                                <p>Typical of all pines are their <span class="number-wrap-inline"> <span class="number">3</span>
+                                                    <input type="text" class="iot-question" data-num="3" data-q_type="8" id="q-5" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                                <p>The wood from pines is not very <span class="number-wrap-inline"> <span class="number">4</span>
+                                                    <input type="text" class="iot-question" data-num="4" data-q_type="8" id="q-6" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <ul style="margin-top: 20px;"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="question question-2">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad12">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad12" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 5-8</h3>
+                                        <div class="drop_down sl-item">
+                                            <p><em>Do the following statements agree with the information given in Reading Passage One?</em></p>
+                                            <p><em>Write</em></p>
+                                            <p>
+                                                <div class="table-responsive">
+                                                    <table data-striping="1" class="table table-hover table-striped">
+                                                        <tbody>
+                                                            <tr class="odd">
+                                                                <td>TRUE</td>
+                                                                <td>if the statement is true</td>
+                                                            </tr>
+                                                            <tr class="even">
+                                                                <td>FALSE</td>
+                                                                <td>if the statement is false</td>
+                                                            </tr>
+                                                            <tr class="odd">
+                                                                <td>NOT GIVEN</td>
+                                                                <td>if the information is not given in the passage</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </p>
+                                            <p><span class="number-wrap-inline"> <span class="number">5</span>
+                                                <select class="iot-question" data-num="5" data-q_type="11" id="q-7">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Ponderosa pines are the largest.</p>
+                                            <p><span class="number-wrap-inline"> <span class="number">6</span>
+                                                <select class="iot-question" data-num="6" data-q_type="11" id="q-8">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Pines are familiar to most people.</p>
+                                            <p><span class="number-wrap-inline"> <span class="number">7</span>
+                                                <select class="iot-question" data-num="7" data-q_type="11" id="q-9">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Birds usually spread pine seeds.</p>
+                                            <p><span class="number-wrap-inline"> <span class="number">8</span>
+                                                <select class="iot-question" data-num="8" data-q_type="11" id="q-10">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Lightning storms benefit pine barrens.</p>
+                                            <ul></ul>
+                                        </div>
+                                    </div>
+                                    <div class="question question-3">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad13">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad13" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 9-11</h3>
+                                        <div class="type_checkbox sl-item">
+                                            <div class="iot-question" id="q-11" data-num="9-11">
+                                                <div class="question-title"><span><p><em>Choose <strong><span style="color:#ff0000;">THREE</span></strong> answers from the list, and write the correct letter, <strong>A-F</strong>, next to the questions.</em>
+                                                    </p>
+                                                    <p><em>Which <span style="color:#ff0000;"><strong>THREE </strong></span>groups of people, <strong>A-F,</strong> particularly&nbsp;like pine trees?</em></p>
+                                                    </span>
+                                                </div>
+                                                <ul class="list-question">
+                                                    <li> <span> <span class="lq-number">A</span> <span class="my-check"> <input type="checkbox" id="q-4097730-A" name="q-11" data-q_type="15" value="A" onchange='check3(this);'> <label for="q-4097730-A">Plantation owners</label> </span> </span>
+                                                    </li>
+                                                    <li> <span> <span class="lq-number">B</span> <span class="my-check"> <input type="checkbox" id="q-4097730-B" name="q-11" data-q_type="15" value="B" onchange='check3(this);'> <label for="q-4097730-B">Outdoor carpenters</label> </span> </span>
+                                                    </li>
+                                                    <li> <span> <span class="lq-number">C</span> <span class="my-check"> <input type="checkbox" id="q-4097730-C" name="q-11" data-q_type="15" value="C" onchange='check3(this);'> <label for="q-4097730-C">People interested in craft</label> </span> </span>
+                                                    </li>
+                                                    <li> <span> <span class="lq-number">D</span> <span class="my-check"> <input type="checkbox" id="q-4097730-D" name="q-11" data-q_type="15" value="D" onchange='check3(this);'> <label for="q-4097730-D">Certain native communities</label> </span> </span>
+                                                    </li>
+                                                    <li> <span> <span class="lq-number">E</span> <span class="my-check"> <input type="checkbox" id="q-4097730-E" name="q-11" data-q_type="15" value="E" onchange='check3(this);'> <label for="q-4097730-E">Factory owners</label> </span> </span>
+                                                    </li>
+                                                    <li> <span> <span class="lq-number">F</span> <span class="my-check"> <input type="checkbox" id="q-4097730-F" name="q-11" data-q_type="15" value="F" onchange='check3(this);'> <label for="q-4097730-F">Users of turpentine</label> </span> </span>
+                                                    </li>
+                                                </ul>
+                                                <ul></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="question question-4">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad14">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad14" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 12-13</h3>
+                                        <div class="question-title">
+                                            <p><em>Choose the correct letter, <strong>A, B, C,</strong> or <strong>D.</strong></em></p>
+                                        </div>
+                                        <div class="sl-item type_radio" data-num="12" data-q_type="6" id="q-12">
+                                            <div class="question-title-group">
+                                                <div class="number">12</div>
+                                                <div class="question-title">
+                                                    <p>Pine cones are</p>
+                                                </div>
+                                            </div>
+                                            <ul class="list-question">
+                                                <li> <span> <span class="lq-number">A</span> <span class="my-radio"> <input type="radio" id="Choice-4097820-A" name="q-12" value="A"> <label for="Choice-4097820-A">complicated</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">B</span> <span class="my-radio"> <input type="radio" id="Choice-4097820-B" name="q-12" value="B"> <label for="Choice-4097820-B">male</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">C</span> <span class="my-radio"> <input type="radio" id="Choice-4097820-C" name="q-12" value="C"> <label for="Choice-4097820-C">mostly the same size.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">D</span> <span class="my-radio"> <input type="radio" id="Choice-4097820-D" name="q-12" value="D"> <label for="Choice-4097820-D">often used as toys in affluent countries.</label> </span> </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sl-item type_radio" data-num="13" data-q_type="6" id="q-13">
+                                            <div class="question-title-group">
+                                                <div class="number">13</div>
+                                                <div class="question-title">
+                                                    <p>Methuselah is</p>
+                                                </div>
+                                            </div>
+                                            <ul class="list-question">
+                                                <li> <span> <span class="lq-number">A</span> <span class="my-radio"> <input type="radio" id="Choice-4097821-A" name="q-13" value="A"> <label for="Choice-4097821-A">4,842 years old.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">B</span> <span class="my-radio"> <input type="radio" id="Choice-4097821-B" name="q-13" value="B"> <label for="Choice-4097821-B">the oldest tree ever.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">C</span> <span class="my-radio"> <input type="radio" id="Choice-4097821-C" name="q-13" value="C"> <label for="Choice-4097821-C">visited by tourists.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">D</span> <span class="my-radio"> <input type="radio" id="Choice-4097821-D" name="q-13" value="D"> <label for="Choice-4097821-D">not subject to much sunshine.</label> </span> </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sl-caption sl-caption-bottom">
+                                    <div class="sl-caption-right">
+                                        <a data="2" href="#section-2" class="btn-section actions-section next"> <span>Next</span> </a>
+                                    </div> <span>Section 1</span></div>
+                            </div>
+                            <div id="set-question-2" class="tab-section-question-reading hidden">
+                                <div class="sl-caption"> <span>Section 2: Questions 14-26</span></div>
+                                <div class="sec-content-2 ">
+                                    <div class="question question-1">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad21">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad21" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 14-16</h3>
+                                        <div class="question-title">
+                                            <p><em>Choose the correct letter, <strong>A, B, C</strong>, or <strong>D.</strong></em></p>
+                                        </div>
+                                        <div class="sl-item type_radio" data-num="14" data-q_type="6" id="q-14">
+                                            <div class="question-title-group">
+                                                <div class="number">14</div>
+                                                <div class="question-title">
+                                                    <p>Agnes Milowka was</p>
+                                                </div>
+                                            </div>
+                                            <ul class="list-question">
+                                                <li> <span> <span class="lq-number">A</span> <span class="my-radio"> <input type="radio" id="Choice-4098270-A" name="q-14" value="A"> <label for="Choice-4098270-A">famous for her photography.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">B</span> <span class="my-radio"> <input type="radio" id="Choice-4098270-B" name="q-14" value="B"> <label for="Choice-4098270-B">familiar with Tank Cave.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">C</span> <span class="my-radio"> <input type="radio" id="Choice-4098270-C" name="q-14" value="C"> <label for="Choice-4098270-C">diving alone.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">D</span> <span class="my-radio"> <input type="radio" id="Choice-4098270-D" name="q-14" value="D"> <label for="Choice-4098270-D">manoeuvring too quickly.</label> </span> </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sl-item type_radio" data-num="15" data-q_type="6" id="q-15">
+                                            <div class="question-title-group">
+                                                <div class="number">15</div>
+                                                <div class="question-title">
+                                                    <p>In cave-diving emergencies,</p>
+                                                </div>
+                                            </div>
+                                            <ul class="list-question">
+                                                <li> <span> <span class="lq-number">A</span> <span class="my-radio"> <input type="radio" id="Choice-4098271-A" name="q-15" value="A"> <label for="Choice-4098271-A">the return is difficult.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">B</span> <span class="my-radio"> <input type="radio" id="Choice-4098271-B" name="q-15" value="B"> <label for="Choice-4098271-B">there is vertical escape.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">C</span> <span class="my-radio"> <input type="radio" id="Choice-4098271-C" name="q-15" value="C"> <label for="Choice-4098271-C">divers often experience silt-outs.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">D</span> <span class="my-radio"> <input type="radio" id="Choice-4098271-D" name="q-15" value="D"> <label for="Choice-4098271-D">some team members stay behind.</label> </span> </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="sl-item type_radio" data-num="16" data-q_type="6" id="q-16">
+                                            <div class="question-title-group">
+                                                <div class="number">16</div>
+                                                <div class="question-title">
+                                                    <p>Cave-diving accidents usually happen</p>
+                                                </div>
+                                            </div>
+                                            <ul class="list-question">
+                                                <li> <span> <span class="lq-number">A</span> <span class="my-radio"> <input type="radio" id="Choice-4098272-A" name="q-16" value="A"> <label for="Choice-4098272-A">when equipment breaks.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">B</span> <span class="my-radio"> <input type="radio" id="Choice-4098272-B" name="q-16" value="B"> <label for="Choice-4098272-B">more than in open-sea diving. </label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">C</span> <span class="my-radio"> <input type="radio" id="Choice-4098272-C" name="q-16" value="C"> <label for="Choice-4098272-C">with bad equipment.</label> </span> </span>
+                                                </li>
+                                                <li> <span> <span class="lq-number">D</span> <span class="my-radio"> <input type="radio" id="Choice-4098272-D" name="q-16" value="D"> <label for="Choice-4098272-D">with a lack of equipment.</label> </span> </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="question question-2">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad22">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad22" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 17-23</h3>
+                                        <div class="sl-item">
+                                            <div class="type_blank table-scroll">
+                                                <p><em>Complete the table.</em></p>
+                                                <p><em>Choose <span style="color:#ff0000;"><strong>NO MORE THAN THREE WORDS</strong></span> from the passage for each answer</em></p>
+                                                <table border="1">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color:#dddddd;">
+                                                                <p class="text-align-center">&nbsp;</p>
+                                                            </td>
+                                                            <td style="background-color:#dddddd;">
+                                                                <p class="text-align-center"><strong>Protocol</strong></p>
+                                                            </td>
+                                                            <td style="background-color:#dddddd;">
+                                                                <p class="text-align-center"><strong>Detail</strong></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p>1st</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>have sufficient training and experience</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>Progression not permitted unless there is <span class="number-wrap-inline"> <span class="number">17</span>
+                                                                    <input type="text" class="iot-question" data-num="17" data-q_type="9" id="q-17" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p>2nd</p>
+                                                            </td>
+                                                            <td>
+                                                                <p><span class="number-wrap-inline"> <span class="number">18</span>
+                                                                    <input type="text" class="iot-question" data-num="18" data-q_type="9" id="q-18" spellcheck="false">
+                                                                    </span> must be followed.</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>must have sufficient <span class="number-wrap-inline"> <span class="number">19</span>
+                                                                    <input type="text" class="iot-question" data-num="19" data-q_type="9" id="q-19" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p>3rd</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>must use a <span class="number-wrap-inline"> <span class="number">20</span>
+                                                                    <input type="text" class="iot-question" data-num="20" data-q_type="9" id="q-20" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                            <td>
+                                                                <p>must keep <span class="number-wrap-inline"> <span class="number">21</span>
+                                                                    <input type="text" class="iot-question" data-num="21" data-q_type="9" id="q-21" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p>4th</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>must have at least three independent lights</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>Dives do not go ahead if <span class="number-wrap-inline"> <span class="number">22</span>
+                                                                    <input type="text" class="iot-question" data-num="22" data-q_type="9" id="q-22" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p>5th</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>must obey rule of thirds</p>
+                                                            </td>
+                                                            <td>
+                                                                <p>each system usually kept separate, sometimes breathed <span class="number-wrap-inline"> <span class="number">23</span>
+                                                                    <input type="text" class="iot-question" data-num="23" data-q_type="9" id="q-23" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul style="margin-top: 20px;"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="question question-3">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad23">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad23" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 24-26</h3>
+                                        <div class="sl-item">
+                                            <div class="type_blank table-scroll">
+                                                <p><em>Complete the summary,</em></p>
+                                                <p><em>Choose <span style="color:#ff0000;"><strong>NO MORE THAN THREE WORDS</strong></span> from the passage for each answer.</em></p>
+                                                <table border="1" cellpadding="1" cellspacing="1">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>After she <span class="number-wrap-inline"> <span class="number">24</span>
+                                                                <input type="text" class="iot-question" data-num="24" data-q_type="9" id="q-24" spellcheck="false">
+                                                                </span> from her diving companion, Agnes Milowka died, illustrating the dangers involved in cave diving, yet there are <span class="number-wrap-inline"> <span class="number">25</span>
+                                                                <input type="text" class="iot-question" data-num="25" data-q_type="9" id="q-25" spellcheck="false">
+                                                                </span> which prove it is acceptably safe, and the attraction of seeing sights <span class="number-wrap-inline"> <span class="number">26</span>
+                                                                <input type="text" class="iot-question" data-num="26" data-q_type="9" id="q-26" spellcheck="false">
+                                                                </span> before lures people on.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul style="margin-top: 20px;"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sl-caption sl-caption-bottom">
+                                    <div class="sl-caption-right">
+                                        <a data="1" href="#section-1" class="btn-section actions-section previous"> <span>Previous</span> </a>
+                                        <a data="3" href="#section-3" class="btn-section actions-section next"> <span>Next</span> </a>
+                                    </div> <span>Section 2</span></div>
+                            </div>
+                            <div id="set-question-3" class="tab-section-question-reading hidden">
+                                <div class="sl-caption"> <span>Section 3: Questions 27-40</span></div>
+                                <div class="sec-content-3 ">
+                                    <div class="question question-1">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad31">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad31" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 27-31</h3>
+                                        <div class="drop_down sl-item">
+                                            <p><em>Write</em></p>
+                                            <p>
+                                                <div class="table-responsive">
+                                                    <table data-striping="1" class="table table-hover table-striped">
+                                                        <tbody>
+                                                            <tr class="odd">
+                                                                <td>TRUE</td>
+                                                                <td>if the statement is true</td>
+                                                            </tr>
+                                                            <tr class="even">
+                                                                <td>FALSE</td>
+                                                                <td>if the statement is false</td>
+                                                            </tr>
+                                                            <tr class="odd">
+                                                                <td>NOT GIVEN</td>
+                                                                <td>if the information is not given in the passage</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </p>
+                                            <p><span class="number-wrap-inline"> <span class="number">27</span>
+                                                <select class="iot-question" data-num="27" data-q_type="11" id="q-27">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Many prison inmates can become worse in prison.</p>
+                                            <p><span class="number-wrap-inline"> <span class="number">28</span>
+                                                <select class="iot-question" data-num="28" data-q_type="11" id="q-28">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Prisons usually have good education and therapy systems.</p>
+                                            <p><span class="number-wrap-inline"> <span class="number">29</span>
+                                                <select class="iot-question" data-num="29" data-q_type="11" id="q-29">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Psychopathic prisoners often reoffend after being released.</p>
+                                            <p><span class="number-wrap-inline"> <span class="number">30</span>
+                                                <select class="iot-question" data-num="30" data-q_type="11" id="q-30">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; Supervised release is stricter than parole.</p>
+                                            <p><span class="number-wrap-inline"> <span class="number">31</span>
+                                                <select class="iot-question" data-num="31" data-q_type="11" id="q-31">
+                                                    <option value=""></option>
+                                                    <option value="TRUE">TRUE</option>
+                                                    <option value="FALSE">FALSE</option>
+                                                    <option value="NOT GIVEN">NOT GIVEN</option>
+                                                </select>
+                                                </span>&nbsp; &nbsp; The abolition of the parole system is usually done after much thought.</p>
+                                            <ul></ul>
+                                        </div>
+                                    </div>
+                                    <div class="question question-2">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad32">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad32" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 32-35</h3>
+                                        <div class="sl-item">
+                                            <div class="type_blank">
+                                                <p><em>Complete the flow chart.</em></p>
+                                                <p><em>Choose <span style="color:#ff0000;"><strong>NO MORE THAN THREE WORDS</strong></span> from the passage for each answer</em></p>
+                                                <p><img alt="Dec 2018 reading 1 s3_0.png" data-entity-type="" data-entity-uuid="" height="603" src="sites/default/files/2018-08/Dec 2018 reading 1 s3_0.png" width="771" /></p>
+                                                <p><span class="number-wrap-inline"> <span class="number">32</span>
+                                                    <input type="text" class="iot-question" data-num="32" data-q_type="7" id="q-32" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                                <p><span class="number-wrap-inline"> <span class="number">33</span>
+                                                    <input type="text" class="iot-question" data-num="33" data-q_type="7" id="q-33" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                                <p><span class="number-wrap-inline"> <span class="number">34</span>
+                                                    <input type="text" class="iot-question" data-num="34" data-q_type="7" id="q-34" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                                <p><span class="number-wrap-inline"> <span class="number">35</span>
+                                                    <input type="text" class="iot-question" data-num="35" data-q_type="7" id="q-35" spellcheck="false">
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <ul style="margin-top: 20px;"></ul>
+                                        </div>
+                                    </div>
+                                    <div class="question question-3">
+                                        <div class="sl-caption">
+                                            <div class="collapse nodepad" aria-expanded="true" id="nodepad33">
+                                                <textarea placeholder="Your draft goes here..."></textarea>
+                                            </div>
+                                            <div class="sl-caption-right">
+                                                <a class="btn-show-note " data-toggle="collapse" data-target="#nodepad33" href="javascript:void(0)" aria-expanded="true"> <strong></strong>Show Notepad </a>
+                                            </div>
+                                        </div>
+                                        <h3>Questions 36-40</h3>
+                                        <div class="sl-item">
+                                            <div class="type_blank table-scroll">
+                                                <p><em>Write the specific term for each definition.</em></p>
+                                                <p><em>Choose <span style="color:#ff0000;"><strong>NO MORE THAN TWO WORDS</strong></span> from the passage for each answer.</em></p>
+                                                <table border="1">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td style="background-color:#dddddd;">
+                                                                <p class="text-align-center"><strong>Specific Term</strong></p>
+                                                            </td>
+                                                            <td style="background-color:#dddddd;">
+                                                                <p class="text-align-center"><strong>Definition</strong></p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><span class="number-wrap-inline"> <span class="number">36</span>
+                                                                    <input type="text" class="iot-question" data-num="36" data-q_type="9" id="q-36" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                            <td>
+                                                                <p>reoffending, after being released from prison</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><span class="number-wrap-inline"> <span class="number">37</span>
+                                                                    <input type="text" class="iot-question" data-num="37" data-q_type="9" id="q-37" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                            <td>
+                                                                <p>manipulating prison officials and procedures</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><span class="number-wrap-inline"> <span class="number">38</span>
+                                                                    <input type="text" class="iot-question" data-num="38" data-q_type="9" id="q-38" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                            <td>
+                                                                <p>an alternative to prison sentences</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><span class="number-wrap-inline"> <span class="number">39</span>
+                                                                    <input type="text" class="iot-question" data-num="39" data-q_type="9" id="q-39" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                            <td>
+                                                                <p>having to be at one’s home by a predetermined time</p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <p><span class="number-wrap-inline"> <span class="number">40</span>
+                                                                    <input type="text" class="iot-question" data-num="40" data-q_type="9" id="q-40" spellcheck="false">
+                                                                    </span>
+                                                                </p>
+                                                            </td>
+                                                            <td>
+                                                                <p>time deducted from the sentences of well-behaved prisoners</p>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <ul style="margin-top: 20px;"></ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sl-caption sl-caption-bottom">
+                                    <div class="sl-caption-right">
+                                        <a data="2" href="#section-2" class="btn-section actions-section previous"> <span>Previous</span> </a>
+                                    </div> <span>Section 3</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reading-footer">
+                    <div class="container">
+                        <div class="rf-bar clearfix">
+                            <div class="rf-barleft">
+                                <div class="rf-bar-pallete"> <span class="pallete-title">Question Palette</span>
+                                    <div class="question-bt"><span class="answered">Answered</span><span class="unanswered">Unanswered</span></div>
+                                </div>
+                                <div class="question-panel">
+                                    <div class="qp-items"> <a class="qp-item qp-item-1 qp-item-unanswered" data-q="q-1" data-section="1"> 1 </a> <a class="qp-item qp-item-2 qp-item-unanswered" data-q="q-2" data-section="1"> 2 </a> <a class="qp-item qp-item-3 qp-item-unanswered" data-q="q-3" data-section="1"> 3 </a> <a class="qp-item qp-item-4 qp-item-unanswered" data-q="q-4" data-section="1"> 4 </a> <a class="qp-item qp-item-5 qp-item-unanswered" data-q="q-5" data-section="1"> 5 </a> <a class="qp-item qp-item-6 qp-item-unanswered" data-q="q-6" data-section="1"> 6 </a> <a class="qp-item qp-item-7 qp-item-unanswered" data-q="q-7" data-section="1"> 7 </a> <a class="qp-item qp-item-8 qp-item-unanswered" data-q="q-8" data-section="1"> 8 </a> <a class="qp-item qp-item-9-11 qp-item-large qp-item-unanswered" data-q="q-9-11" data-section="1"> 9 <em></em> 11 </a> <a class="qp-item qp-item-12 qp-item-unanswered" data-q="q-12" data-section="1"> 12 </a> <a class="qp-item qp-item-13 qp-item-unanswered" data-q="q-13" data-section="1"> 13 </a> <a class="qp-item qp-item-14 qp-item-unanswered" data-q="q-14" data-section="2"> 14 </a> <a class="qp-item qp-item-15 qp-item-unanswered" data-q="q-15" data-section="2"> 15 </a> <a class="qp-item qp-item-16 qp-item-unanswered" data-q="q-16" data-section="2"> 16 </a> <a class="qp-item qp-item-17 qp-item-unanswered" data-q="q-17" data-section="2"> 17 </a> <a class="qp-item qp-item-18 qp-item-unanswered" data-q="q-18" data-section="2"> 18 </a> <a class="qp-item qp-item-19 qp-item-unanswered" data-q="q-19" data-section="2"> 19 </a> <a class="qp-item qp-item-20 qp-item-unanswered" data-q="q-20" data-section="2"> 20 </a> <a class="qp-item qp-item-21 qp-item-unanswered" data-q="q-21" data-section="2"> 21 </a> <a class="qp-item qp-item-22 qp-item-unanswered" data-q="q-22" data-section="2"> 22 </a> <a class="qp-item qp-item-23 qp-item-unanswered" data-q="q-23" data-section="2"> 23 </a> <a class="qp-item qp-item-24 qp-item-unanswered" data-q="q-24" data-section="2"> 24 </a> <a class="qp-item qp-item-25 qp-item-unanswered" data-q="q-25" data-section="2"> 25 </a> <a class="qp-item qp-item-26 qp-item-unanswered" data-q="q-26" data-section="2"> 26 </a> <a class="qp-item qp-item-27 qp-item-unanswered" data-q="q-27" data-section="3"> 27 </a> <a class="qp-item qp-item-28 qp-item-unanswered" data-q="q-28" data-section="3"> 28 </a> <a class="qp-item qp-item-29 qp-item-unanswered" data-q="q-29" data-section="3"> 29 </a> <a class="qp-item qp-item-30 qp-item-unanswered" data-q="q-30" data-section="3"> 30 </a> <a class="qp-item qp-item-31 qp-item-unanswered" data-q="q-31" data-section="3"> 31 </a> <a class="qp-item qp-item-32 qp-item-unanswered" data-q="q-32" data-section="3"> 32 </a> <a class="qp-item qp-item-33 qp-item-unanswered" data-q="q-33" data-section="3"> 33 </a> <a class="qp-item qp-item-34 qp-item-unanswered" data-q="q-34" data-section="3"> 34 </a> <a class="qp-item qp-item-35 qp-item-unanswered" data-q="q-35" data-section="3"> 35 </a> <a class="qp-item qp-item-36 qp-item-unanswered" data-q="q-36" data-section="3"> 36 </a> <a class="qp-item qp-item-37 qp-item-unanswered" data-q="q-37" data-section="3"> 37 </a> <a class="qp-item qp-item-38 qp-item-unanswered" data-q="q-38" data-section="3"> 38 </a> <a class="qp-item qp-item-39 qp-item-unanswered" data-q="q-39" data-section="3"> 39 </a> <a class="qp-item qp-item-40 qp-item-unanswered" data-q="q-40" data-section="3"> 40 </a></div>
+                                </div>
+                            </div>
+                            <div class="rf-bar-time">
+                                <input type="hidden" value="60" class="innertimmer" /> <span id="stopwatch"> 60:00 </span></div>
+                            <div class="rf-barright">
+                                <div class="rfc-button"> <a href="#" class="question-pl"> Question Palette </a>
+                                    <a class="link-popup-login submit-btn-test submit" onclick="submitAnswer()" data-target="#modal-login-pop" data-toggle="modal" data-submittest="submit" href="#"> <span class="icon-submit"></span> Submit </a>
+                                    <a href="javascript:;" class="review" data-toggle="modal" data-target="#modal-solution"> <span></span>Review </a>
+                                </div>
+                            </div>
+                            <div class="expand" id="expand-pallete"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" value="reading" class="question-type" />
+                <input type="hidden" value="409312" class="get-qid" /> </article>
+        </div>
+        <div class="region region-footer-hidden">
+            <section id="block-profile" class="block block-iot-ielts block-profile clearfix">
+                <div id="build_profile_tpl"></div>
+                <a class="click-profile-build" href="account/build/profile_destination_/ielts-general-training-reading-practice-test-1.html"></a>
+            </section>
+            <section id="block-contactmessage" class="block block-iot-ielts block-contactmessage clearfix">
+                <div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-auto modal-profile">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <h2 class="modal-caption">Thank you</h2>
+                            <div class="login-box">
+                                <p style="text-align: center"> Thank you for contacting us, we will get back within 48 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-subscribe" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-auto modal-profile">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="login-box">
+                                <p style="text-align: center"> You have subscribed successfully.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-report" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-auto modal-profile">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="login-box">
+                                <p style="text-align: center;padding-top: 50px"> Thank you for your feedback, we will investigate and resolve the issue within 48 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="modal-draft" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-auto modal-profile">
+                        <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"></i>
+                            <div class="login-box">
+                                <p style="text-align: center;padding-top: 50px"> Your answers has been saved successfully.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="block-topupmodalblock" class="block block-iot-commerce block-topup-modal-block clearfix">
+                <div class="modal fade" id="modal-add-credit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-auto modal-add-credit">
+                        <form action="index.html" method="get" id="topup_credit">
+                            <div class="modal-content-wp"> <i class="ion-android-close close-modal ic-upgrade" data-dismiss="modal" aria-label="Close"></i>
+                                <div class="clearfix credit-wrap">
+                                    <div class="md-col-left">
+                                        <h3>Add Credits</h3>
+                                        <div class="annotate"> How many IOT Credits do you want to buy?</div>
+                                        <div class="credit-board">
+                                            <div class="minus-value action-bt" ondragover="return false"></div>
+                                            <div class="current-value"><span class="symbol" id="dollar-symbol">$</span>
+                                                <input type="text" id="dollar-value" value="100" name="amount" autocomplete="Off">
+                                            </div>
+                                            <div class="plus-value action-bt" ondragover="return false"></div>
+                                        </div>
+                                    </div>
+                                    <div class="md-col-right">
+                                        <h5>Your Order</h5>
+                                        <div class="credit-title">IOT Credits</div>
+                                        <div class="iot-credit"> <span class="symbol">$</span><span class="value">10</span></div> <a href="#" class="btn-checkout">Go To Checkout</a></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section id="block-topupmoremodalblock" class="block block-iot-commerce block-topup-more-modal-block clearfix">
+                <div class="modal fade" id="modal-insu-credit" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                    <div class="modal-dialog modal-auto modal-insu-credit">
+                        <form action="#" method="post">
+                            <div class="modal-content-wp"> <i class="ion-android-close close-modal ic-upgrade" data-dismiss="modal" aria-label="Close"></i>
+                                <div class="clearfix credit-wrap">
+                                    <h2>You do not have enough IOT Credits</h2>
+                                    <input type="hidden" class="amount-more" value="" />
+                                    <input type="hidden" class="rem-more" value="" />
+                                    <p class="desc">Your account does not have enough IOT Credits to complete the order. Please purchase IOT Credits to continue.</p> <a href="javascript:;" class="iot-bt buymore">Buy More IOT Credits</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="notifi-popup-mobile">
+        <div class="container">
+            <div class="notifications-popup-wp">
+                <div class="close-button" id="notification-closebt"></div>
+                <div class="title"><span>Notifications</span></div>
+                <div class="nav nav-tabs" id="notification-tabs"></div>
+                <div class="tab-content">
+                    <div class="table-order-content tab-pane fade" id="order-id1">
+                        <form action="" method="POST" role="form">
+                            <div class="order-title"></div>
+                            <div class="time"></div>
+                            <div class="container-mess-order"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messages-popup-mobile">
+        <div class="container">
+            <div class="messages-popup-wp">
+                <div class="users-column">
+                    <div class="close-button" id="messages-closebt"></div>
+                    <div class="mes-title-top"><span>Messages</span></div>
+                    <div class="nav nav-tabs" id="messages-tabs">
+                        <form role="form" class="user-search" id="mobile-user-search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="" placeholder="Search…">
+                            </div>
+                            <button type="submit" class="btn btn-primary"><img src="themes/iot/images/icon_search.png" alt=""></button>
+                        </form>
+                        <div id="mobile-threads"></div>
+                    </div>
+                </div>
+                <div class="tab-content">
+                    <div class="table-chat-content tab-pane fade clearfix" id="user-id1">
+                        <div class="partner-mess-name"></div>
+                        <div class="mess-container-detail"></div>
+                        <div class="write-message">
+                            <form id="mobile-chat-form" role="form">
+                                <textarea class="form-control" rows="5" name="message" placeholder="Write a message…"></textarea>
+                                <button type="submit" class="btn btn-primary"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/409312","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"bootstrap\/popover,bootstrap\/tooltip,ckeditor_indentblock\/indentblock,core\/html5shiv,google_analytics\/google_analytics,iot\/global-styling,iot\/intro-js,iot\/iot_notify,iot\/question-front,iot_commerce\/iot-commerce-modal-topup,iot_ielts\/contact_form,iot_message\/message-notification,iot_notify\/iot-notification,iot_quiz\/iot_frontend,iot_quiz\/reading_front,iot_user\/iot_account,lazy\/lazy,private_message_nodejs\/browser_notification,rate\/fivestar,simple_popup_blocks\/simple_popup_blocks,statistics\/drupal.statistics,system\/base","theme":"iot","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"iot_message_unread":0,"lazy":{"errorClass":"b-error","loadInvisible":false,"offset":100,"saveViewportOffsetDelay":"50","selector":".b-lazy","skipClass":"no-b-lazy","src":"data-src","successClass":"b-loaded","validateDelay":"25","placeholderSrc":"data:image\/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="},"privateMessageNodejs":{"nodejsUrl":"https:\/\/node.ieltsonlinetests.com:8444","nodejsSecret":"8c3531201c40730764a0b5cdd8a8f18374b7393629b1fa4b0d3d5cbc4f461fe6","debugEnabled":false},"simple_popup_blocks":{"settings":[{"pid":"22","identifier":"block-webinarregistration19-2","type":"0","css_selector":"1","layout":"4","visit_counts":"1","overlay":"1","escape":"0","trigger_method":"0","trigger_selector":"#custom-css-id","delay":"3","minimize":"0","close":"1","width":"757","status":"1"},{"pid":"27","identifier":"block-webinarregistration24","type":"0","css_selector":"1","layout":"4","visit_counts":"1","overlay":"1","escape":"0","trigger_method":"0","trigger_selector":"#custom-css-id","delay":"3","minimize":"0","close":"1","width":"757","status":"1"}]},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto left","tooltip_selector":"","tooltip_trigger":"hover"},"key":"e4b45451e7d09a0bfe86","tour":{"data":[{"element":".reading-header .show-test-menu","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003EToolbar\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EClick on the icons to see test info, share this test, report a mistake, etc.\u003C\/div\u003E","position":"auto"},{"element":".tab-section-reading.active","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003EReading passage panel\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EView the reading passage here\u003C\/div\u003E","position":"auto"},{"element":".tab-section-question-reading.active","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003EQuestion panel\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EYou will answer all questions relating to the reading passage here\u003C\/div\u003E","position":"auto"},{"element":".tab-section-question-reading.active .sl-caption.sl-caption-bottom .sl-caption-right","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003ESection tab\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EGo to the previous or the next section\u003C\/div\u003E","position":"auto"},{"element":".reading-footer .rf-bar-pallete","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003EQuestion palette\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EView your answered\/unanswered questions. Click on a question number to go to that question (on the test) instantly\u003C\/div\u003E","position":"auto"},{"element":".rf-bar-time","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003ECountdown timer\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003ERemaining time to finish the test\u003C\/div\u003E","position":"auto"},{"element":".submit-btn-test","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003ESubmit\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EClick to submit your answers when you finish answering all questions\u003C\/div\u003E","position":"auto"},{"element":".rf-barright .review","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003EReview\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EClick to review your answers before submitting\u003C\/div\u003E","position":"auto"},{"element":".rf-barright .solution","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003ESolution\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EClick to view answers and explanation without taking the test\u003C\/div\u003E","position":"auto"},{"element":".tab-section-question-reading.active .btn-show-note","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003ENotepad\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EUse this as a draft to quickly take note of your answer\u003C\/div\u003E","position":"auto"},{"element":".reading-box \u003E .gutter-horizontal","intro":"\u003Cdiv class=\u0022tip-label\u0022\u003EResize grip\u003C\/div\u003E\u003Cdiv class=\u0022tip-content\u0022\u003EAdjust size of reading passage panel or question panel\u003C\/div\u003E","position":"auto"}],"first":[{"id":"learn-about-the-new-look","plugin":"text","label":"Learn about the new look","weight":-100,"attributes":null,"body":"Reading Take Test page has a new look and tools for better experience","location":"top"}],"id":"product-tour-reading-take-test-pages"},"statistics":{"data":{"nid":"409312"},"url":"\/core\/modules\/statistics\/statistics.php"},"answers":{"total":"40","sec_id":"409312","answers":{"1":{"type":"blank","number":"1","answer":["growth ring"],"prefix":"growth ring"},"2":{"type":"blank","number":"2","answer":["Methuselah sprouted"],"prefix":"Methuselah sprouted"},"3":{"type":"blank","number":"3","answer":["pine cones","cones"],"prefix":"(pine) cones"},"4":{"type":"blank","number":"4","answer":["durable"],"prefix":"durable"},"5":{"type":"drop_down","number":"5","answer":"NOT GIVEN"},"6":{"type":"drop_down","number":"6","answer":"TRUE"},"7":{"type":"drop_down","number":"7","answer":"FALSE"},"8":{"type":"drop_down","number":"8","answer":"TRUE"},"9-11":{"type":"checkbox","number":"9-11","answer":["A","C","D"]},"12":{"type":"radio","number":"12","answer":"A"},"13":{"type":"radio","number":"13","answer":"D"},"14":{"type":"radio","number":"14","answer":"B"},"15":{"type":"radio","number":"15","answer":"A"},"16":{"type":"radio","number":"16","answer":"D"},"17":{"type":"blank","number":"17","answer":["relevant dive time"],"prefix":"relevant dive time"},"18":{"type":"blank","number":"18","answer":["a dive plan","dive plan"],"prefix":"(a) dive plan"},"19":{"type":"blank","number":"19","answer":["decompression stops"],"prefix":"decompression stops"},"20":{"type":"blank","number":"20","answer":["guide rope"],"prefix":"guide rope"},"21":{"type":"blank","number":"21","answer":["sufficient tension"],"prefix":"sufficient tension"},"22":{"type":"blank","number":"22","answer":["one fails"],"prefix":"one fails"},"23":{"type":"blank","number":"23","answer":["equally"],"prefix":"equally"},"24":{"type":"blank","number":"24","answer":["parted company","parted"],"prefix":"parted (company)"},"25":{"type":"blank","number":"25","answer":["statistics"],"prefix":"statistics"},"26":{"type":"blank","number":"26","answer":["never seen"],"prefix":"never seen"},"27":{"type":"drop_down","number":"27","answer":"TRUE"},"28":{"type":"drop_down","number":"28","answer":"NOT GIVEN"},"29":{"type":"drop_down","number":"29","answer":"TRUE"},"30":{"type":"drop_down","number":"30","answer":"TRUE"},"31":{"type":"drop_down","number":"31","answer":"FALSE"},"32":{"type":"blank","number":"32","answer":["high moral standing"],"prefix":"high moral standing"},"33":{"type":"blank","number":"33","answer":["parole officer"],"prefix":"parole officer"},"34":{"type":"blank","number":"34","answer":["regulatory condition"],"prefix":"regulatory condition"},"35":{"type":"blank","number":"35","answer":["parole violation hearing"],"prefix":"parole violation hearing"},"36":{"type":"blank","number":"36","answer":["criminal recidivism"],"prefix":"criminal recidivism"},"37":{"type":"blank","number":"37","answer":["system cracking"],"prefix":"system cracking"},"38":{"type":"blank","number":"38","answer":["probation"],"prefix":"probation"},"39":{"type":"blank","number":"39","answer":["curfew","a curfew"],"prefix":"(a) curfew"},"40":{"type":"blank","number":"40","answer":["good time"],"prefix":"good time"}}},"score":0,"storage":[],"language":"en","hidetest":"Hide Test Info","showtest":"Show Test Info","shownotepad":"Show Notepad","hidenotepad":"Hide Notepad","user":{"uid":0,"permissionsHash":"d0e3750971e3b947b48c4e6afb1f6ca2af12d0aa44a30bddbeb98a71c4156ded"}}
+    </script>
+    <script src="sites/default/files/js/js_BKcMdIbOMdbTdLn9dkUq3KCJfIKKo2SvKoQ1AnB8D-g.js"></script>
+    <script src="sites/default/files/js/js_EkQytwPDD4k7uSPl4xvGx61bWhr1V5KihGAw6qFi3E4.js"></script>
+    <script src="sites/default/files/js/js_T1slKIFdixzZtosaS7H-aJaW-Ny8LEpRBDQ7iG7miCg.js"></script>
+    <script src="sites/default/files/js/js_QssuvkBrx8hV2zn_PWuNjJuiZMC0FrEO1oFG9MbdWf0.js"></script>
+    <script src="sites/default/files/js/js_y5TG8Uo8kDp7fvHoBopCMRdrjaVAPGUunDgMr00Xj58.js"></script>
+    <script src="sites/default/files/js/js_AxM8RFq5KCpEAaQjjpDriFXfZBCcnJzO1OCsWIOEttw.js"></script>
+    <script src="sites/default/files/js/js_kINJcSoBXLdM3UknILoY9ppf52FVkqro6Wi0Pp2PpI0.js"></script>
+    <script src="sites/default/files/js/js_iQ7PSBJ_X4SlJdQqlJF6zYRxneCYEPmVrACqzCWZOY4.js"></script>
+    <script src="sites/default/files/js/js_CpRf0owEUYneGFdYcnQIbnF2S6jcrZxnzujnqb2mKq4.js"></script>
+    <script src="sites/default/files/js/js_M53CXkbCPLxrNHeSJs7EldTUC6U779qc-UBfPjT20Y4.js"></script>
+    <script src="sites/default/files/js/js_v0qWScXv_jpI5D2veWfiBX0Emc7AAISYRLQKZEixd5k.js"></script>
+    <script src="sites/default/files/js/js_v7rqRog5hsSorwBUnpusqRTCuBtzpvudZKc5QTA1EcU.js"></script>
+    <script src="sites/default/files/js/js_MVP1Qy-h3IdIc4_vQFJ7mgs5PjPK2I76SlhVbDaHk2o.js"></script>
+    <script src="sites/default/files/js/js_8NC2X8BQrvR00GcErnoAf0H9vrA3s9jBjJOczVUqys8.js"></script>
+    <script src="sites/default/files/js/js_Ly1QpXR7aQycynE4L211zRfcq2LXnC0_yYcyGk01Q64.js"></script>
+    <script src="sites/default/files/js/js_6FrwNJLhKSp8jhqrSOKJ81LuEpp8FSIJZyvg0J8v4LQ.js"></script>
+    <script src="sites/default/files/js/js_gUAG7eIDRmKQFwJR53oNNoRtGUhnNd8zOz0d-_PBEyg.js"></script>
+    <script src="sites/default/files/js/js_Zp14hiPyoliJV3K2NJ8Gg70fwIiN3-4wUISbo5nACi0.js"></script>
+    <script src="sites/default/files/js/js_MbBYLLl9u3GOYpSrRDKt6l0opviF_zmF8lmjF7MJi2c.js"></script>
+    <script src="sites/default/files/js/js_tAGB-7m-7ukbv5oFaOBq1HUTrD8lHZhF3Sa3ZNc8ABM.js"></script>
+    <script src="sites/default/files/js/js_69Rh3pEQUfrJhVCea0ldMa6zGyJsW55ky3QeeFPftl8.js"></script>
+    <script src="sites/default/files/js/js_KZ3jnMnJgtA973U_ZPUCYLX6Ewb_5z1onMw5iqrM0yY.js"></script>
+    <script src="sites/default/files/js/js_iJxMQ-7Y5VqFN7PwVQ7Gk7yYydmTDipTIuQTuepisO4.js"></script>
+    <script src="sites/default/files/js/js_c0duT10gp15i07YR4_lYl1jAQd_hi_xeY4zuBBwSDZ8.js"></script>
+    <script src="sites/default/files/js/js_74vK8gJ77gMid2KM6pp015wgPnEPWLQP39AY_2vLknc.js"></script>
+    <script src="jaypan/private-message-nodejs/node_modules/socket-io-client/dist/socket_subdomain/socket.io.js"></script>
+    <script src="sites/default/files/js/js_kP6evU8k60K4FIGXUHG_1SkpNQrEGcp64Ybncr-Kivg.js"></script>
+    <script src="sites/default/files/js/js_2ooySxCk2DziVNZ-t3OC4qcVjiEAe5E0VfL8yQOUjp0.js"></script>
+    <script src="sites/default/files/js/js_58rf2aTOG78IRrsYW5r3REs9R0SsZH9ZqT7GsvoIDO8.js"></script>
+    <script src="sites/default/files/js/js_XQABWpWvaEiBSpm7NPPC3Fs9QwRtOD7VLkdDT9KIyFE.js"></script>
+    <script src="sites/default/files/js/js_s9lVo9IYpdygxni-msYJzMLjwsTvPSu69xSqzI6mSOo.js"></script>
+    <script src="sites/default/files/js/js_QSLR2OabdF7THeJRGz2iPO4UmaPCLEor5ZqhkpQDI48.js"></script>
+    <script src="sites/default/files/js/js_ksq15DP7vpEQoxN5UUglnvbfDuVsubxtN4pucdb6amA.js"></script>
+    <script src="sites/default/files/js/js_EytL0pGRkt383HjPEoRdtRIRyR-wf5vZZnSZ-BMefPo.js"></script>
+    <script src="sites/default/files/js/js_TPtYsVWv2faY0EmO6OsCK33TyJSwJ9oGgsXdznjpHrw.js"></script>
+    <script src="sites/default/files/js/js_18rY4o8H86ZoCFu9XJWsCsGWjfJA2olnHIOV1-O1Q0w.js"></script>
+    <script src="sites/default/files/js/js_VAwvOf1Noa-hP1haluW5rgEB7QZY6JzwFkDDVZYm-4A.js"></script>
+    <script src="sites/default/files/js/js_TgGVCzgKWX4Kk9vNwQPKoC_DKa10QeC3U-Un0W62-ag.js"></script>
+    <script src="sites/default/files/js/js_al3sWxdnb_a5CKP5QtFhlsil0OsFskrryVxmm3H-NdQ.js"></script>
+    <script src="sites/default/files/js/js_8d_veUa6kFudpNFzjEcMccdmYkhU02d1UXMknmUAqrU.js"></script>
+    <script src="sites/default/files/js/js_9L6hf2sFrwjm6ZOqAwAZZg9-1lE-C0Cj_C1w-bo4Svc.js"></script>
+    <script src="sites/default/files/js/js_y0NC3AHa6rvyz5uEfzgig7B_qrXVcZEWDuyKJ-KuFMc.js"></script>
+    <script src="sites/default/files/js/js_hF94qDhKRWU6uGhp47rkQWwZmMBbrHpf-pXERTAvPqg.js"></script>
+    <script src="sites/default/files/js/js_v-wcy_hoIQ-7DZTGez5394AG_-ywM49z3WxzKwHbUdQ.js"></script>
+    <script src="sites/default/files/js/js_Eo3BvooGJ4QjciglAmkgi-KXwE8USzg3Em72shBmwzU.js"></script>
+    <script src="sites/default/files/js/js_F_a5E1BwLImHdGamBJqDZW-2OdFCPgXGoM31ea0PoDs.js"></script>
+    <script src="sites/default/files/js/js_Gwjp7tKN3G3FMXB14Wgm7CWh1fna0OnOIi1e8p2-g94.js"></script>
+    <script src="sites/default/files/js/js_saGtFgw6k4sdWrDZg-_nQ3XDLwfqbsMcyciTJjtWLzk.js"></script>
+    <script src="sites/default/files/js/js_MWmSCiaZ2800TxgRSom3-hHuV7Fc5YZ8LHpL8univkQ.js"></script>
+    <script src="sites/default/files/js/js_CW9ubfn6OSM8BLa16PZjOviwXSWOEuaG1Qd90cmdBjE.js"></script>
+    <script src="sites/default/files/js/js_o3Azn1JAT7zxaOVeX3XQvYw6g7kh5ZcVtbp_g4ECIzo.js"></script>
+    <script src="sites/default/files/js/js_DJLA3xrFN35Am7pkL46tWID0-IWFb1Aq5DNOWYEzoNo.js"></script>
+    <script src="sites/default/files/js/js_avyt_qyZiHpLnnv48tQo-caULPSFf0LMh7oxCKHWt-U.js"></script>
+    <script src="sites/default/files/js/js_pthHsbxm6tp637DA-Xyao832cfX7ShNRfzo_UCrx95U.js"></script>
+    <script src="sites/default/files/js/js_JBEKPHE5tg2eXvstfQUE82l1Quk3ivK9FOSV7NVZgXY.js"></script>
+    <script src="sites/default/files/js/js_x22PFNFzpss-z-XsHOMZSw4gvRZ8eyW1bw62_CXnLR4.js"></script>
+    <script src="sites/default/files/js/js_UybKonhwXpq_BSxuFIyIWfDL54u3Vjpp-ZGD5aFbQ3Q.js"></script>
+    <script src="sites/default/files/js/js_p8mlXCzrZdQD-c8NzDVOTAx4Utow_fTE8GFrLQexI3c.js"></script>
+    <script src="sites/default/files/js/js_gPoA23fRpEVRYxwOzET7-EgAsi6fkdCG3d5l_c_LmKs.js"></script>
+    <script src="sites/default/files/js/js_77EA1UllMOgpejdkjjnY0I2cfO2FBbnSqRtieQxcLOc.js"></script>
+    <script src="sites/default/files/js/js_-XGDSNqX-3ZEVwBrGUVAMdpeWadQ_HWzTkMgQn4jjRI.js"></script>
+    <script src="sites/default/files/js/js_DVnt0Lua-tZ4Mb-GBdGHI3t72xaWufBtkix5aIHNdNM.js"></script>
+    <script src="sites/default/files/js/js_8vW_SAMbyqJiZvlV7_qipZrpyoBylRA20AY3HRhM-Wk.js"></script>
+    <script src="sites/default/files/js/js_73IQrYM1GeBl3mv-WQ30CkGg6I63LqcQkcImSBFIN9s.js"></script>
+    <script src="sites/default/files/js/js_6We7V56CHCBWD43kGb48FvqzoHEwlDdBYcbUj8Xxwp4.js"></script>
+    <script src="sites/default/files/js/js_p8TTbEtrW3ej_EuwZ8Rpbek_yWObJ5IAQmyCRCKmJ1k.js"></script>
+    <script src="sites/default/files/js/js_qibF0FROFouhwOOSpPgOGbJEeMRxmADEvOkWRJ_zewA.js"></script>
+    <script src="sites/default/files/js/js_09q-2nINZLq-grz_lg6wRjXj61uWzqGBBYfPavnoho0.js"></script>
+    <script src="sites/default/files/js/js_pDTLZDJ34kdybeSMuOnW16SgnvXy5uRjKaiqcD_sjY8.js"></script>
+    <script src="sites/default/files/js/js_CXMovwnthR0YwjVmVfBw78gRBous12d8kdDu5l2zNog.js"></script>
+    <script src="sites/default/files/js/js_1WZJFLMlIUeo-mvxOTbhL20m1NhUw-0E9qkoy71Hig4.js"></script>
+    <script src="sites/default/files/js/js_74H1b9LFIyVZM8KiMcd396RhKDEJuafILCjbIGBDFBM.js"></script>
+    <script src="sites/default/files/js/js_RIc-mPWI2lkYsomX810AdwYD_WKMeBobSy8rEJ41v4g.js"></script>
+    <script src="sites/default/files/js/js_EoLHs74KOMxEIlyeIaSZaCLOYcWUPRJJqxR2fiMb1L4.js"></script>
+    <script src="sites/default/files/js/js_rF_NANmlRzqWHPxkc5H7Zd4Qmw5jshy2c0XadHx4pb0.js"></script>
+    <script src="sites/default/files/js/js_dP3dGM-_xclsAOQqXCYax-78jXSP3wVAQfKvbpigFhs.js"></script>
+    <script async src="menu/page.js"></script>
+    </js-bottom-placeholder>
+    <div id="notification"></div>
+    <div class="modal fade" id="modal-login-pop" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+        <div class="modal-dialog modal-auto modal-profile">
+            <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                <h2 class="modal-caption" id="answer" style="text-align: center"></h2>
+                <div class="reading-footer">
+                    <div class="rfc-button" style="padding:10px"> 
+                            <a class="link-popup-login submit-btn-test submit" href="/">Back home </a>
+                    </div>
+                </div>
+                <!-- <div class="login-box account clearfix">
+                     <div class="error-message main"></div>
+                    <div class="login-left">
+                        <form id="user-login" method="post">
+                            <div class="login-feild">
+                                <p>Username or Email</p>
+                                <div class="text-feild"> <i class="fa fa-user"></i>
+                                    <input type="text" required class="email" name="name" />
+                                    <div class="error-message email"></div>
+                                </div>
+                            </div>
+                            <div class="login-feild">
+                                <p>Password</p>
+                                <div class="text-feild"> <i class="fa fa-lock"></i>
+                                    <input type="password" required class="password" name="pass" />
+                                    <div class="error-message password"></div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-login" name="op" value="Log in"> Login </button>
+                            <input type="hidden" value="/ielts-mock-test-2018-december-reading-practice-test-1" class="destination" />
+                            <input type="hidden" value="L2llbHRzLW1vY2stdGVzdC0yMDE4LWRlY2VtYmVyLXJlYWRpbmctcHJhY3RpY2UtdGVzdC0x" class="destination_encode" />
+                        </form>
+                        <div class="remember">
+                            <label>
+                                <input type="checkbox" class="remember" name="remember" /> <span>Remember ?</span> </label> <a id="forget-pass" href="user/password.html">Forgot password</a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <div class="login-line"> <span>Or</span></div>
+                    <div class="login-right">
+                        <a href="#" data-social_type="google"> <i class="fa fa-google"></i>Login with Google </a>
+                        <a href="#" data-social_type="facebook" class="facebook"> <i class="fa fa-facebook-f"></i>Login with Facebook </a>
+                        <a href="#" data-social_type="twitter" class="twitter"> <i class="fa fa-twitter"></i>Login with Twitter </a>
+                        <form class="social-login-form" data-drupal-selector="social-login-form" action="index.html" method="post" id="social-login-form" accept-charset="UTF-8">
+                            <input data-drupal-selector="edit-destination" aria-describedby="edit-destination--description" type="hidden" name="destination" value="/ielts-mock-test-2018-december-reading-practice-test-1" title="Destination redirect after login success" data-toggle="tooltip" />
+                            <input id="tz" data-drupal-selector="edit-tz" aria-describedby="edit-tz--description" type="hidden" name="tz" value="" title="Current user&amp;#039;s timezone" data-toggle="tooltip" />
+                            <input id="st" data-drupal-selector="edit-st" aria-describedby="edit-st--description" type="hidden" name="st" value="" title="Social type, ex: google, facebook, twitter" data-toggle="tooltip" />
+                            <button id="btn-submit" class="hide button js-form-submit form-submit btn-primary btn" data-drupal-selector="edit-submit" type="submit" name="op" value="Submit">Submit</button>
+                            <input autocomplete="off" data-drupal-selector="form-xsblewrt55-dmalkbhuwfndwgubgo9-5iip3crxtche" type="hidden" name="form_build_id" value="form-XSblEwRt55_DmALkbhUwfnDWGUbGo9_5iip3CRXtCHE" />
+                            <input data-drupal-selector="edit-social-login-form" type="hidden" name="form_id" value="social_login_form" />
+                        </form>
+                    </div>
+                    <div class="clearfix"></div> -->
+                    <!-- <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Question</th>
+                            <th scope="col">Answer</th>
+                            <th scope="col">Result</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td id="as_1"></td>
+                            <td>growth ring</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td id="as_2"></td>
+                            <td>Methuselah sprouted</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td id="as_3"></td>
+                            <td>(pine) cones</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td id="as_4"></td>
+                            <td>durable</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td id="as_5"></td>
+                            <td>NOT GIVE</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td id="as_6"></td>
+                            <td>True</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td id="as_7"></td>
+                            <td>False</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">8</th>
+                            <td id="as_8"></td>
+                            <td>True</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">9-11</th>
+                            <td id="as_9"></td>
+                            <td>A,B,C</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">12</th>
+                            <td id="as_10"></td>
+                            <td>A</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">13</th>
+                            <td id="as_11"></td>
+                            <td>D</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">14</th>
+                            <td id="as_12"></td>
+                            <td>B</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">15</th>
+                            <td id="as_13"></td>
+                            <td>A</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">16</th>
+                            <td id="as_14"></td>
+                            <td>D</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">17</th>
+                            <td id="as_15"></td>
+                            <td>Relevant dive time</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">18</th>
+                            <td id="as_16"></td>
+                            <td>(a) dive plan</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">19</th>
+                            <td id="as_17"></td>
+                            <td>Decomperssionsion stops</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">20</th>
+                            <td id="as_18"></td>
+                            <td>Guide rope</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">21</th>
+                            <td id="as_19"></td>
+                            <td>Sufficient tension</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">22</th>
+                            <td id="as_20"></td>
+                            <td>One fails</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">23</th>
+                            <td id="as_21"></td>
+                            <td>Equally</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">24</th>
+                            <td id="as_22"></td>
+                            <td>parter(company)</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">25</th>
+                            <td id="as_23"></td>
+                            <td>statistics</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">26</th>
+                            <td id="as_24"></td>
+                            <td>never seen</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">27</th>
+                            <td id="as_25"></td>
+                            <td>True</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">28</th>
+                            <td id="as_26"></td>
+                            <td>NOT GIVE</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">29</th>
+                            <td id="as_27"></td>
+                            <td>True</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">30</th>
+                            <td id="as_28"></td>
+                            <td>True</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">31</th>
+                            <td id="as_29"></td>
+                            <td>False</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">32</th>
+                            <td id="as_30"></td>
+                            <td>high moral standing</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">33</th>
+                            <td id="as_31"></td>
+                            <td>parole officer</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">34</th>
+                            <td id="as_32"></td>
+                            <td>regulatory condition</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">35</th>
+                            <td id="as_33"></td>
+                            <td>parole violation hearing</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">36</th>
+                            <td id="as_34"></td>
+                            <td>criminal recidivism</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">37</th>
+                            <td id="as_35"></td>
+                            <td>System cracking</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">38</th>
+                            <td id="as_36"></td>
+                            <td>probation</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">39</th>
+                            <td id="as_37"></td>
+                            <td>curfew</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">40</th>
+                            <td id="as_38"></td>
+                            <td>good times</td>
+                          </tr>
+                           
+                          
+                        </tbody>
+                    </table>
+                    <div class="footerTable" style="display: block;float: right;">
+                        <p class="footerTableTxt" style="display: inline-block;font-size: 11px;color: red;" scope="row">Total number of correct answers:</p>
+                        <p class="footerTableNumber" style="display: inline-block;font-size: 11px;color: red;" id="count"></p>
+                    </div>
+                </div> -->
+                <!-- <div class="create-acc-link">
+                    <p>Don't have an account? <a class="link-popup-register" data-target="#modal-register-pop" data-toggle="modal" href="#"> Create one now!</a></p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="modal fade" id="modal-register-pop" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" style="display: none;">
+        <div class="modal-dialog modal-auto modal-profile">
+            <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
+                <h2 class="modal-caption"> Register a free account</h2>
+                <div class="login-box account clearfix">
+                    <div class="error-message main"></div>
+                    <div class="login-left">
+                        <form method="post" id="user-register">
+                            <div class="login-feild">
+                                <p>Email</p>
+                                <div class="text-feild"> <i class="fa fa-envelope"></i>
+                                    <input type="email" required class="email" name="email" />
+                                    <div class="error-message email"></div>
+                                </div>
+                            </div>
+                            <div class="login-feild">
+                                <p>Password</p>
+                                <div class="text-feild"> <i class="fa fa-lock"></i>
+                                    <input type="password" class="password" name="password" />
+                                    <div class="error-message password"></div>
+                                </div>
+                            </div>
+                            <div class="login-feild">
+                                <p>Confirm password</p>
+                                <div class="text-feild"> <i class="fa fa-lock"></i>
+                                    <input type="password" class="confirm_password" name="confirm_password" />
+                                    <div class="error-message confirm_password"></div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-login"> Register </button>
+                            <input type="hidden" value="/ielts-mock-test-2018-december-reading-practice-test-1" class="destination" />
+                            <div class="create-acc-link">
+                                <p>Have a account already. <a class="link-popup-login" data-target="#modal-login-pop" data-toggle="modal" href="#"> Please login here</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-line"> <span>Or</span></div>
+                    <div class="login-right">
+                        <a href="#" data-social_type="google"> <i class="fa fa-google"></i>Login with Google </a>
+                        <a href="#" data-social_type="facebook" class="facebook"> <i class="fa fa-facebook-f"></i>Login with Facebook </a>
+                        <a href="#" data-social_type="twitter" class="twitter"> <i class="fa fa-twitter"></i>Login with Twitter </a>
+                    </div>
+                </div>
+                <div class="create-acc-link">
+                    <p> By joining IELTS Online Tests, you agree to our <a href="terms-and-conditions.html">Terms of Use</a> and <a href="privacy-policy.html">Privacy Policy.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="4-3-4/bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+        Sentry.init({
+            dsn: 'https://01ed9d8faa92425182d492651aabb624@sentry.io/1331428'
+        });
+    </script>
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "licenseKey": "80b8504cce",
+            "applicationID": "140263710",
+            "transactionName": "Y1MANkoEV0FTUEwNXVoZIwFMDFZcHXdKEUJVWj4hVxdcbnRcSgluclkQD3oQUF5WVkpJDEZTDAZdF2leU1BdDF1YUgcQfgpLX3NQTA1dWg==",
+            "queueTime": 0,
+            "applicationTime": 990,
+            "atts": "TxQDQAIeRE8=",
+            "errorBeacon": "bam.nr-data.net",
+            "agent": ""
+        }
+    </script>
+    <center><font size="2">This is the free demo result. For a full version of this website, please go to  <a href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/">https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/</a></font></center>
+</body>
+
+</html>

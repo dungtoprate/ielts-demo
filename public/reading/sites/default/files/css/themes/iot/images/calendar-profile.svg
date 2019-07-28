@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Icn/Calendar@2x</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[1400]-1.1-Personal-Info-Questions" transform="translate(-892.000000, -637.000000)">
+            <g id="Icn/Calendar" transform="translate(890.000000, 635.000000)">
+                <g id="Group">
+                    <g id="CalendarFIcn">
+                        <g id="Vector" transform="translate(2.500000, 2.500000)" fill="#CCCCCC" fill-rule="nonzero">
+                            <rect id="Rectangle-path" x="13" y="8" width="3" height="3" rx="1.5"></rect>
+                            <rect id="Rectangle-path" x="13" y="13" width="3" height="3" rx="1.5"></rect>
+                            <rect id="Rectangle-path" x="8" y="8" width="3" height="3" rx="1.5"></rect>
+                            <rect id="Rectangle-path" x="8" y="13" width="3" height="3" rx="1.5"></rect>
+                            <rect id="Rectangle-path" x="2.9835" y="8" width="3" height="3" rx="1.5"></rect>
+                            <rect id="Rectangle-path" x="2.9835" y="13" width="3" height="3" rx="1.5"></rect>
+                            <path d="M14.5,0 C13.934,0 13.75,0.474 13.75,0.75 L13.75,3.25 C13.75,3.526 13.934,4 14.5,4 C15.0275,4 15.25,3.526 15.25,3.25 L15.25,0.75 C15.25,0.474 14.9455,0 14.5,0 Z" id="Shape"></path>
+                            <path d="M4.4835,0 C3.8995,0 3.7335,0.474 3.7335,0.75 L3.7335,3.3 C3.75418034,3.69724137 4.08577766,4.00673221 4.4835,4 C4.9385,4 5.2335,3.576 5.2335,3.3 L5.2335,0.75 C5.2335,0.474 5.075,0 4.4835,0 Z" id="Shape"></path>
+                            <path d="M17.5,1.5 L16.15,1.5 L16.15,3.25 C16.15,4.022 15.5745,4.9 14.55,4.9 C13.387,4.9 12.85,4.022 12.85,3.25 L12.85,1.5 L6.1335,1.5 L6.1335,3.25 C6.1335,4.022 5.54,4.9 4.4835,4.9 C3.4075,4.9 2.8335,4.022 2.8335,3.25 L2.8335,1.5 L1.5,1.5 C0.671572875,1.5 -7.10542736e-15,2.17157288 -7.10542736e-15,3 L-7.10542736e-15,17.5 C-7.10542736e-15,18.3284271 0.671572875,19 1.5,19 L17.5,19 C18.3284271,19 19,18.3284271 19,17.5 L19,3 C19,2.17157288 18.3284271,1.5 17.5,1.5 Z M17.5,17 C17.5,17.2761424 17.2761424,17.5 17,17.5 L2,17.5 C1.72385763,17.5 1.5,17.2761424 1.5,17 L1.5,6.212 C1.5,6.10154305 1.58954305,6.012 1.7,6.012 L17.3,6.012 C17.4104569,6.012 17.5,6.10154305 17.5,6.212 L17.5,17 Z" id="Shape"></path>
+                        </g>
+                        <g id="Layer_6">
+                            <rect id="Rectangle-path" x="0" y="0" width="24" height="24"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

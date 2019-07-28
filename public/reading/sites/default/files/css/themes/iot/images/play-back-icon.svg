@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="15" viewBox="0 0 23 15">
+    <defs>
+        <text id="b" fill="#FFF" font-family="Nunito-Regular, Nunito" font-size="10">
+            <tspan x="5" y="14">15</tspan>
+        </text>
+        <filter id="a" width="125%" height="125%" x="-12.5%" y="-12.5%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation=".5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.535863904 0"/>
+        </filter>
+    </defs>
+    <g fill="#FFF" fill-rule="evenodd" opacity=".8">
+        <g>
+            <use filter="url(#a)" xlink:href="#b"/>
+            <use xlink:href="#b"/>
+        </g>
+        <path fill-rule="nonzero" d="M22.549 14c-.27 0-.45-.18-.45-.452C22.098 6.594 16.415.903 9.47.903c-2.842 0-5.592.949-7.802 2.71h2.39c.27 0 .45.18.45.452 0 .27-.18.451-.45.451H0V.452C0 .18.18 0 .451 0c.27 0 .45.18.45.452V3.07C3.338 1.084 6.315 0 9.472 0 16.91 0 23 6.097 23 13.548c0 .271-.18.452-.451.452z"/>
+    </g>
+</svg>

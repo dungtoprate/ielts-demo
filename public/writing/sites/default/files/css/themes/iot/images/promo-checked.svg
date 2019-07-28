@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / Green / Circle Done@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="10" cy="10" r="10"></circle>
+    </defs>
+    <g id="Checkout" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="[1400---IOT]-Checkout-Apply-Code" transform="translate(-1373.000000, -695.000000)">
+            <g id="Icons-/-Green-/-Circle-Done" transform="translate(1373.000000, 695.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Oval-3" fill="#00CBC8" xlink:href="#path-1"></use>
+                <g id="Color/-IOT-Turquoise/-Main" mask="url(#mask-2)" fill="#32B4C8">
+                    <g transform="translate(-0.666667, -0.666667)" id="Rectangle-3">
+                        <rect x="0" y="0" width="21" height="21"></rect>
+                    </g>
+                </g>
+                <g id="Correct" mask="url(#mask-2)" fill="#FFFFFF">
+                    <g transform="translate(4.333333, 6.333333)" id="Shape">
+                        <path d="M11.2279526,0.661641431 C11.003833,0.446119523 10.6407587,0.446119523 10.4166391,0.661641431 L4.6991747,6.16661682 L1.27788076,2.87247492 C1.0517005,2.66955072 0.699238367,2.67553839 0.480633698,2.88601863 C0.262029029,3.09649888 0.255810246,3.4358618 0.466567204,3.65363609 L4.29351793,7.33835857 C4.51763759,7.55388048 4.88071181,7.55388048 5.10483148,7.33835857 L11.2279526,1.4428026 C11.4517936,1.22701232 11.4517936,0.87743171 11.2279526,0.661641431 L11.2279526,0.661641431 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

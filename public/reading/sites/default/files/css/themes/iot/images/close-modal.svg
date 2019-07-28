@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons / CM / Close / Grey</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M13.9333782,12.0077539 L23.5983217,21.6726973 C24.1323062,22.2066819 24.1341205,23.0706275 23.602374,23.602374 C23.0706275,24.1341205 22.2066819,24.1323062 21.6726973,23.5983217 L12.0077539,13.9333782 L2.34315371,23.5979784 C1.80712488,24.1340072 0.938050443,24.1340072 0.402021618,23.5979784 C-0.134007206,23.0619496 -0.134007206,22.1928751 0.402021618,21.6568463 L10.0666218,11.9922461 L0.401678317,2.32730266 C-0.132306202,1.79331814 -0.134120492,0.929372465 0.397625986,0.397625986 C0.929372465,-0.134120492 1.79331814,-0.132306202 2.32730266,0.401678317 L11.9922461,10.0666218 L21.6568463,0.402021618 C22.1928751,-0.134007206 23.0619496,-0.134007206 23.5979784,0.402021618 C24.1340072,0.938050443 24.1340072,1.80712488 23.5979784,2.34315371 L13.9333782,12.0077539 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons-/-CM-/-Close-/-Grey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Color-/-CM-/-White" transform="translate(4.000000, 4.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#7A7A7A" xlink:href="#path-1"></use>
+            <g mask="url(#mask-2)" fill="#FFFFFF" id="Rectangle-10">
+                <g transform="translate(-5.000000, -4.000000)">
+                    <rect x="0" y="0" width="33" height="33"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

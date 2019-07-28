@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="10px" viewBox="0 0 15 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Mask@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.07053735,9.68 C4.73063217,9.68 4.390727,9.55540498 4.12480444,9.30593837 L0.437151346,5.84880681 C-0.120138261,5.32650337 -0.148348455,4.45143423 0.374093266,3.89428291 C0.896396702,3.3369933 1.77160413,3.30878311 2.32861717,3.83122483 L5.07053735,6.401533 L11.4999723,0.374093266 C12.0569854,-0.148348455 12.9321928,-0.120138261 13.4544962,0.437151346 C13.976938,0.994164383 13.9487278,1.86937181 13.3914382,2.39167524 L6.01627026,9.30593837 C5.7503477,9.55540498 5.41044252,9.68 5.07053735,9.68" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Checkbox-/-Active-Mobile" transform="translate(-14.000000, -20.000000)">
+            <g id="Color-/-CM-/-DarkBlue-/-1" transform="translate(10.000000, 14.000000)">
+                <g transform="translate(4.400000, 6.160000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
