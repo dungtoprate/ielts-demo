@@ -21,35 +21,35 @@
 	
         function submitAnswer(){
             var count = 0
-            // document.getElementById("as_1").innerHTML = document.getElementById("q-3").value;
+            document.getElementById("as_1").innerHTML = document.getElementById("q-3").value;
             if(document.getElementById("q-3").value.trim().toLowerCase() == "growth ring".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_2").innerHTML = document.getElementById("q-4").value;
+            document.getElementById("as_2").innerHTML = document.getElementById("q-4").value;
             if(document.getElementById("q-4").value.trim().toLowerCase() == "Methuselah sprouted".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_3").innerHTML = document.getElementById("q-5").value;
+            document.getElementById("as_3").innerHTML = document.getElementById("q-5").value;
             if(document.getElementById("q-5").value.trim().toLowerCase() == "cones".trim().toLowerCase() || document.getElementById("q-5").value.trim().toLowerCase() == "pine cones".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_4").innerHTML = document.getElementById("q-6").value;
+            document.getElementById("as_4").innerHTML = document.getElementById("q-6").value;
             if(document.getElementById("q-6").value.trim().toLowerCase() == "durable".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_5").innerHTML = document.getElementById("q-7").value;
+            document.getElementById("as_5").innerHTML = document.getElementById("q-7").value;
             if(document.getElementById("q-7").value.trim().toLowerCase() == "NOT GIVEN".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_6").innerHTML = document.getElementById("q-8").value;
+            document.getElementById("as_6").innerHTML = document.getElementById("q-8").value;
             if(document.getElementById("q-8").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_7").innerHTML = document.getElementById("q-9").value;
+            document.getElementById("as_7").innerHTML = document.getElementById("q-9").value;
             if(document.getElementById("q-9").value.trim().toLowerCase() == "FALSE".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_8").innerHTML = document.getElementById("q-10").value;
+            document.getElementById("as_8").innerHTML = document.getElementById("q-10").value;
             if(document.getElementById("q-10").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
                 count= count + 1;
             }
@@ -80,7 +80,8 @@
 					count= count + 2;
                 } else if(text.includes("A") || text.includes("C") || text.includes("D")){
 					count= count + 1;
-                }					
+                }	
+                document.getElementById("as_9").innerHTML = listRadio;				
             }
 
             var listQ12 = null
@@ -97,7 +98,7 @@
                 listQ12 = document.getElementById("Choice-4097820-D").value
             }
             if(listQ12 != null){
-                // document.getElementById("as_10").innerHTML = listQ12;
+                document.getElementById("as_10").innerHTML = listQ12;
                 if(listQ12 == "A"){
                     count= count + 1;
                 }
@@ -117,7 +118,7 @@
                 listQ13 = document.getElementById("Choice-4097821-D").value
             }
             if(listQ13 != null){
-                // document.getElementById("as_11").innerHTML = listQ13;
+                document.getElementById("as_11").innerHTML = listQ13;
                 if(listQ13 == "D"){
                     count= count + 1;
                 }
@@ -138,7 +139,7 @@
             }
            
             if(listQ14 != null){
-                // document.getElementById("as_12").innerHTML = listQ14;
+                document.getElementById("as_12").innerHTML = listQ14;
                 if(listQ14 == "B"){
                     count= count + 1;
                 }
@@ -157,7 +158,7 @@
                 listQ15 = document.getElementById("Choice-4098271-D").value
             }
             if(listQ15 != null){
-                // document.getElementById("as_13").innerHTML = listQ15;
+                document.getElementById("as_13").innerHTML = listQ15;
                 if(listQ15 == "A"){
                     count= count + 1;
                 }
@@ -177,108 +178,110 @@
                 listQ16 = document.getElementById("Choice-4098272-D").value
             }
             if(listQ16 != null){
-                // document.getElementById("as_14").innerHTML = listQ16;
+                document.getElementById("as_14").innerHTML = listQ16;
                 if(listQ16 == "D"){
                     count= count + 1;
                 }
             }
             
-            // document.getElementById("as_15").innerHTML = document.getElementById("q-17").value;
+            document.getElementById("as_15").innerHTML = document.getElementById("q-17").value;
             if(document.getElementById("q-17").value.trim().toLowerCase() == "relevant dive time".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_16").innerHTML = document.getElementById("q-18").value;
+            document.getElementById("as_16").innerHTML = document.getElementById("q-18").value;
             if(document.getElementById("q-18").value.trim().toLowerCase() == "dive plan".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_17").innerHTML = document.getElementById("q-19").value;
+            document.getElementById("as_17").innerHTML = document.getElementById("q-19").value;
             if(document.getElementById("q-19").value.trim().toLowerCase() == "decompression stops".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_18").innerHTML = document.getElementById("q-20").value;
+            document.getElementById("as_18").innerHTML = document.getElementById("q-20").value;
             if(document.getElementById("q-20").value.trim().toLowerCase() == "guide rope".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_19").innerHTML = document.getElementById("q-21").value;
+            document.getElementById("as_19").innerHTML = document.getElementById("q-21").value;
             if(document.getElementById("q-21").value.trim().toLowerCase() == "sufficient tension".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_20").innerHTML = document.getElementById("q-22").value;
+            document.getElementById("as_20").innerHTML = document.getElementById("q-22").value;
             if(document.getElementById("q-22").value.trim().toLowerCase() == "one fails".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_21").innerHTML = document.getElementById("q-23").value;
+            document.getElementById("as_21").innerHTML = document.getElementById("q-23").value;
             if(document.getElementById("q-23").value.trim().toLowerCase() == "equally".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_22").innerHTML = document.getElementById("q-24").value;
+            document.getElementById("as_22").innerHTML = document.getElementById("q-24").value;
             if(document.getElementById("q-24").value.trim().toLowerCase() == "parted".trim().toLowerCase() || document.getElementById("q-24").value.trim().toLowerCase() == "parted company".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_23").innerHTML = document.getElementById("q-25").value;
+            document.getElementById("as_23").innerHTML = document.getElementById("q-25").value;
             if(document.getElementById("q-25").value.trim().toLowerCase() == "statistics".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_24").innerHTML = document.getElementById("q-26").value;
+            document.getElementById("as_24").innerHTML = document.getElementById("q-26").value;
             if(document.getElementById("q-26").value.trim().toLowerCase() == "never seen".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_25").innerHTML = document.getElementById("q-27").value;
+            document.getElementById("as_25").innerHTML = document.getElementById("q-27").value;
             if(document.getElementById("q-27").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_26").innerHTML = document.getElementById("q-28").value;
+            document.getElementById("as_26").innerHTML = document.getElementById("q-28").value;
             if(document.getElementById("q-28").value.trim().toLowerCase() == "NOT GIVEN".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_27").innerHTML = document.getElementById("q-29").value;
+            document.getElementById("as_27").innerHTML = document.getElementById("q-29").value;
             if(document.getElementById("q-29").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_28").innerHTML = document.getElementById("q-30").value;
+            document.getElementById("as_28").innerHTML = document.getElementById("q-30").value;
             if(document.getElementById("q-30").value.trim().toLowerCase() == "TRUE".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_29").innerHTML = document.getElementById("q-31").value;
+            document.getElementById("as_29").innerHTML = document.getElementById("q-31").value;
             if(document.getElementById("q-31").value.trim().toLowerCase() == "FALSE".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_30").innerHTML = document.getElementById("q-32").value;
+            document.getElementById("as_30").innerHTML = document.getElementById("q-32").value;
             if(document.getElementById("q-32").value.trim().toLowerCase() == "high moral standing".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_31").innerHTML = document.getElementById("q-33").value;
+            document.getElementById("as_31").innerHTML = document.getElementById("q-33").value;
             if(document.getElementById("q-33").value.trim().toLowerCase() == "parole officer".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_32").innerHTML = document.getElementById("q-34").value;
+            document.getElementById("as_32").innerHTML = document.getElementById("q-34").value;
             if(document.getElementById("q-34").value.trim().toLowerCase() == "regulatory condition".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_33").innerHTML = document.getElementById("q-35").value;
+            document.getElementById("as_33").innerHTML = document.getElementById("q-35").value;
             if(document.getElementById("q-35").value.trim().toLowerCase() == "parole violation hearing".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_34").innerHTML = document.getElementById("q-36").value;
+            document.getElementById("as_34").innerHTML = document.getElementById("q-36").value;
             if(document.getElementById("q-36").value.trim().toLowerCase() == "criminal recidivism".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_35").innerHTML = document.getElementById("q-37").value;
+            document.getElementById("as_35").innerHTML = document.getElementById("q-37").value;
             if(document.getElementById("q-37").value.trim().toLowerCase() == "system cracking".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_36").innerHTML = document.getElementById("q-38").value;
+            document.getElementById("as_36").innerHTML = document.getElementById("q-38").value;
             if(document.getElementById("q-38").value.trim().toLowerCase() == "probation".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_37").innerHTML = document.getElementById("q-39").value;
+            document.getElementById("as_37").innerHTML = document.getElementById("q-39").value;
             if(document.getElementById("q-39").value.trim().toLowerCase() == "curfew".trim().toLowerCase() || document.getElementById("q-39").value.trim().toLowerCase() == "a curfew".trim().toLowerCase()){
                 count= count + 1;
             }
-            // document.getElementById("as_38").innerHTML = document.getElementById("q-40").value;
+            document.getElementById("as_38").innerHTML = document.getElementById("q-40").value;
             if(document.getElementById("q-40").value.trim().toLowerCase() == "good time".trim().toLowerCase()){
                 count= count + 1;
             }
+			
+			document.getElementById("count").innerHTML = count;
 
             var url_string = window.location.href; //window.location.href
             var url = new URL(url_string);
@@ -647,7 +650,7 @@
     <div id="overlay-region" class="">&nbsp;</div>
     <div id="overlay-menu"></div><a href="#main-content" class="visually-hidden focusable"> Skip to main content</a>
     <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-        <div class="region region-header-question">
+        <div class="region region-header-question" style="display: none">
             <section id="block-headerquestion" class="block block-iot-ielts block-headerquestion clearfix">
                 <nav class="menu-res menu-res-reading hidden-lg hidden-md">
                     <div class="msr-menu clearfix">
@@ -995,7 +998,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testing reading-box api">
+                <div class="testing reading-box api" style="top:0">
                     <div id="slpit-one" class="split split-item">
                         <div style="background-color: #d6e4da; height:0;">
                             <div id="context-menu" class="context-menu" style="position: relative;display: none;width: 180px;">
@@ -1933,13 +1936,9 @@
         <div class="modal-dialog modal-auto modal-profile">
             <div class=""> <i class="ion-android-close close-modal" data-dismiss="modal" aria-label="Close"> </i>
                 <h2 class="modal-caption" id="answer" style="text-align: center"></h2>
-                <div class="reading-footer">
-                    <div class="rfc-button" style="padding:10px"> 
-                            <a class="link-popup-login submit-btn-test submit" href="/">Back home </a>
-                    </div>
-                </div>
-                <!-- <div class="login-box account clearfix">
-                     <div class="error-message main"></div>
+
+                <div class="login-box account clearfix">
+                     <!-- <div class="error-message main"></div>
                     <div class="login-left">
                         <form id="user-login" method="post">
                             <div class="login-feild">
@@ -1981,7 +1980,7 @@
                         </form>
                     </div>
                     <div class="clearfix"></div> -->
-                    <!-- <table class="table">
+                    <table class="table">
                         <thead>
                           <tr>
                             <th scope="col">Question</th>
@@ -2188,7 +2187,12 @@
                         <p class="footerTableTxt" style="display: inline-block;font-size: 11px;color: red;" scope="row">Total number of correct answers:</p>
                         <p class="footerTableNumber" style="display: inline-block;font-size: 11px;color: red;" id="count"></p>
                     </div>
-                </div> -->
+                </div> 
+                <div class="reading-footer" style="bottom: -15px">
+                    <div class="rfc-button" style="padding:10px"> 
+                            <a class="link-popup-login submit-btn-test submit" href="/">Back home </a>
+                    </div>
+                </div>
                 <!-- <div class="create-acc-link">
                     <p>Don't have an account? <a class="link-popup-register" data-target="#modal-register-pop" data-toggle="modal" href="#"> Create one now!</a></p>
                 </div>
